@@ -11,7 +11,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Getting Started",
+        "tab": "Bắt đầu",
         "groups": [
           {
             "group": "Get Started",
@@ -35,7 +35,7 @@
         ]
       },
       {
-        "tab": "Platform",
+        "tab": "LUKLAK platform",
         "groups": [
           {
             "group": "API Documentation",
@@ -55,7 +55,7 @@
         ]
       },
       {
-        "tab": "Build your system",
+        "tab": "Thiết kế hệ thống",
         "groups": [
           {
             "group": "API Documentation",
@@ -76,6 +76,26 @@
       },
       {
         "tab": "Templates",
+        "groups": [
+          {
+            "group": "API Documentation",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Endpoint Examples",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Khóa học",
         "groups": [
           {
             "group": "API Documentation",
