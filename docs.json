@@ -4,8 +4,8 @@
   "name": "LUKLAK Unified & Universal",
   "colors": {
     "primary": "#72AEFF",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "light": "#72AEFF",
+    "dark": "#72AEFF"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -116,8 +116,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/luklaklight.svg",
+    "dark": "/logo/luklakdark.svg"
   },
   "navbar": {
     "links": [
