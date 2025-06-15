@@ -16,8 +16,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "index",
-              "quickstart",
+              "getting-started/index",
               "development"
             ]
           },
@@ -38,18 +37,18 @@
         "tab": "LUKLAK platform",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Kiến trúc hệ thống",
             "pages": [
-              "api-reference/introduction"
+              "luklak-platform/quickstart"
             ]
           },
           {
             "group": "Endpoint Examples",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "luklak-platform/endpoint/get",
+              "luklak-platform/endpoint/create",
+              "luklak-platform/endpoint/delete",
+              "luklak-platform/endpoint/webhook"
             ]
           }
         ]
