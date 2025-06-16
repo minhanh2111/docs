@@ -44,9 +44,9 @@
             ]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "Thiết kế Chức năng",
             "pages": [
-              "luklak-platform/endpoint/get",
+              "function-design/functiondesign",
               "luklak-platform/endpoint/create",
               "luklak-platform/endpoint/delete",
               "luklak-platform/endpoint/webhook"
