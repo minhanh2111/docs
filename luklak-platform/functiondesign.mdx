@@ -1,0 +1,34 @@
+---
+title: "LUKLAK NOCODE & LOWCODE: THIẾT KẾ CHỨC NĂNG"
+description: "Description of your new file."
+---
+
+## **FUNCTION / CHỨC NĂNG**
+
+<Note>
+  Chức năng là bản thiết kế định hình logic vận hành của một phạm trù nghiệp vụ công việc nhất định trong nền tảng Luklak NoCode & LowCode. Từ mỗi Chức năng sẽ tạo ra các Mảng việc để làm việc thực tế theo đúng logic đã thiết kế ở Chức năng.
+</Note>
+
+### **Object Types & Universal Object / Loại Việc & Đối Tượng Phổ Quát**
+
+Trong mỗi Chức năng sẽ định nghĩa các Loại việc tương ứng với các kiểu nghiệp vụ - công việc khác nhau. Loại việc cụ thể này được tạo nên từ Đối tượng Phổ quát là yếu tố trừu tượng hóa cốt lõi của hệ thống Luklak NoCode & LowCode. Khi Mảng việc được tạo ra từ bản thiết kế Chức năng, thì có thể tạo các Đầu việc để làm việc trong Mảng việc tương ứng với thiết kế của các Loại việc trong Chức năng.
+
+#### **Two Core Components / Hai Yếu Tố Cấu Thành**
+
+Loại việc được cấu tạo nên từ 2 thành tố:
+
+- **Luồng tiến trình:** bao gồm các Trạng thái và Bước chuyển giữa các trạng thái đó, thể hiện trực quan luồng quy trình của Loại việc đó diễn ra như nào.
+- **Trường dữ liệu & Màn hình:** các Trường dữ liệu do người dùng tự tạo ra để đáp ứng nhu cầu lưu trữ thông tin của Loại việc đó. Các Trường dữ liệu được được sắp xếp hiển thị trong một Màn hình để gán cho một Loại việc.
+
+#### **Two Levels of Object Types / Hai Cấp Độ Của Loại Việc**
+
+- **Loại việc tiêu chuẩn:** đây cấp độ chính của Loại việc, luôn cần có cấp độ này.
+- **Loại việc con:** được tạo sau và nằm dưới Loại việc tiêu chuẩn (trong trường hợp cần dùng), dùng để chia các Loại việc lớn thành các Loại việc nhỏ hơn bên dưới.
+
+#### **Object Connections / Kết Nối Đầu Việc**
+
+Các Loại việc và Đầu việc tạo ra từ đó có thể kết nối với nhau tạo nên quy trình nghiệp vụ sâu rộng hơn hoặc tạo sự liên quan giữa các Đầu việc với nhau để có cái nhìn tổng thể. Có 3 cách tạo ra sự kết nối:
+
+- **Kết nối Loại việc ở Toàn cục**: được tạo ở Toàn cục, quy định rõ những Loại việc nào có thể kết nối với nhau thông qua Loại kết nối đó, dùng chung được cho mọi Chức năng, Mảng việc
+- **Trường Đầu việc:** là một loại Trường dữ liệu cài đặt cho Loại việc ở trong Chức năng, cho phép đứng ở một Đầu việc này có thể chọn và lưu giá trị là một hoặc nhiều Đầu việc khác theo tiêu chí lọc đã cài đặt trước.
+- **Loại việc Cha - con**: là một Loại kết nối đặc biệt được định nghĩa trước bởi hệ thống, dành riêng cho mối quan hệ giữa Đối tượng tiêu chuẩn và Đối tượng con nằm dưới nó.
