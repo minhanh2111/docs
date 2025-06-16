@@ -66,8 +66,8 @@
           {
             "group": "Thiết kế Chức năng",
             "pages": [
-              "function-design/functiondesign",
-              "luklak-platform/endpoint/create",
+              "function-design/functiondesign-en",
+              "function-design/functiondesign-vn",
               "luklak-platform/endpoint/delete",
               "luklak-platform/endpoint/webhook"
             ]
