@@ -3,109 +3,17 @@ title: "Function design"
 description: "Description of your new file."
 ---
 
-## **FUNCTION / CHỨC NĂNG**
-
-A Function is the blueprint that defines the operational logic of a specific business operations module in Luklak NoCode & LowCode platform. From each Function, Spaces are created for actual work — running exactly as designed in the original Function logic.
-
-### **Object Types & Universal Object / Loại Việc & Đối Tượng Phổ Quát**
-
-Each Function defines its own Object types, representing different kinds of business work or processes. These specific Object types are created from the Universal Object, the core abstraction behind the Luklak NoCode & LowCode system. When a Space is created from a Function, Objects can be created within the Space according to the structure and logic of the Object types defined in that Function.
-
-#### **Two Core Components / Hai Yếu Tố Cấu Thành**
-
-An Object type is defined by two main components:
-
-- **Workflow:** consists of Statuses and Transitions between them, visually representing how the work process flows within that Object type.
-- **Data fields & screens:** custom-defined Data fields to capture the necessary information for that Object type. These fields are arranged into a Screen layout, which is then assigned to the Object type.
-
-#### **Two Levels of Object Types / Hai Cấp Độ Của Loại Việc**
-
-- **Standard object types:** the primary level of an Object type, which is always required.
-- **Sub-object types:** created under a standard type (when needed), used to break down larger types into smaller, more specific ones.
-
-#### **Object Connections / Kết Nối Đầu Việc**
-
-Object types (and their Objects) can be connected to form wide-ranging workflows or express specific task-level dependencies. There are 3 types of connections:
-
-- **Global object connection**: Configured at the global level, this defines which Object types can be linked together through a specific connection type. These links are reusable across all Functions and Spaces.
-- **Object field**: A type of Data field configured for an Object type within a Function, allowing one Object to select and store references to one or more other Objects based on predefined filtering criteria.
-- **Parent–child connection**: A a built-in connection used exclusively to represent the relationship between a standard Object type and its sub-Object types beneath it.
-
-### **Automation / Tự Động Hóa**
-
-Acts as the processing brain that connects and automates information flow across Functions within the unified Luklak system, with support for external integration. Core principle: Trigger – Condition – Action. Or more simply: When A happens – check for B – then do C.
-
-#### **Three Types of Automation Rules / Ba Loại Quy Tắc Tự Động**
-
-There are three types of automation rules, corresponding to four triggering methods:
-
-- **Background rules:** Triggered by system events such as object creation/update, schedules, or incoming external webhooks.
-- **Workflow rules:** Run when an object changes status within a workflow.
-- **Object action rules:** Shown in the object detail menu, allowing users to manually trigger automation.
-- **Standalone actions (coming soon):** Create independent action menus at the Space, Area, or Function level, not tied to any Object.
-
-#### **Powerful Capabilities / Khả Năng Sâu Rộng**
-
-- **Unified & universal automation:** Connects and processes all Objects and data across Functions in the system.
-- **Smart values:** Dynamically retrieve, calculate, and transform data before updates.
-- **Built-in multi-channel communication:** email, Zalo, voice systems, etc.
-- **Webhook / HTTP Request:** Enables full two-way integration with external apps, especially via N8N.
-- **Low-code support:** Use Velocity in Luklak, or JavaScript / Python via N8N to handle complex logic.
-
-### **Workview, Dashboard, Filter / Giao Diện Làm Việc, Báo Cáo, Bộ Lọc**
-
-Data from multiple Objects is aggregated and visually presented in different ways based on needs forming screens for users to work with. The following utilities and features can all be created and customized with ease.
-
-#### **Workview / Giao Diện Làm Việc**
-
-List, Kanban, Calendar, Timeline
-
-#### **Dashboards / Báo Cáo**
-
-- Query and aggregate data across all Functions using Universal Query Language (UQL).
-- Display data with various gadget types: Charts, Counters & Calculations, 1D/2D Statistics, Object Lists, and Activity Updates.
-- Filter controls can be customized for convenient data interaction.
-
-**Filters / Bộ Lọc**
-
-- UQL enables searching and aggregating across all Object data, including user-defined fields.
-- Quick filter bar: instantly refine data shown on Workviews.
-- Saved filters: predefined filter sets for recurring needs – reusable, shareable, and capable of sending automated alerts listing matching Objects.
-
-### **Permission & Notification Scheme / Phương Án Phân Quyền & Thông Báo**
-
-Define in detail over 20 actions who has permission to perform them and who will receive notifications. Four predefined system schemes are available by default and can be used in most cases. Users can also create and customize their own schemes as needed. Select a Scheme created at the global level to assign it to a Function, with the option to extend it using additional configurations at the Function level.
-
-### **Role / Vai Trò**
-
-Role acts as a bridge between the Permission & Notification Scheme of a Function and the specific users in the Spaces created from that Function. Two types of Roles:
-
-- **Global roles:** automatically apply to all Functions.
-- **Function roles:** created specifically for a single Function.
-
-### **Item Access / Truy Cập Tiện Ích**
-
-Control who can edit this Function using the Item access mechanism. 3 levels: Member, Manager, and Admin.
-
-### **Actions with Function / Sử Dụng Chức Năng**
-
-Once a Function blueprint is completed, it can be used in several ways:
-
-- Create Spaces from the Function to execute actual work.
-- Export the Function to a file and import it into another Business.
-- Or create a new Function from the prebuilt template library.
-
-## **UNIVERSAL OBJECT & OBJECT TYPE / ĐỐI TƯỢNG PHỔ QUÁT & LOẠI VIỆC**
+## **UNIVERSAL OBJECT & OBJECT TYPE**
 
 Universal Object is the foundational data and logic unit in Luklak's Nocode platform. It abstracts away all underlying technical complexity, allowing users to visually define business logic and workflows without writing code.
 
-### **From Abstract to Action / Từ Trừu Tượng Tới Cụ Thể**
+### **From Abstract to Action**
 
 - Universal Object is the core abstraction concept in the Luklak Nocode & Lowcode platform, used to define any type of work or business logic as needed.
 - Object types are defined within Functions, based on Universal Objects, each representing a specific business process or work model.
 - Objects are individual work items created inside a Space, based on the Object type defined in its source Function.
 
-#### **Examples / Ví Dụ**
+#### **Examples**
 
 - Object types "Task" and "Subtask" in the Task Management Function.
 - Object types "Customer", "Contact", and "Opportunity" in the CRM Function.
@@ -114,21 +22,21 @@ Universal Object is the foundational data and logic unit in Luklak's Nocode plat
 - Object type "Ticket" in the Customer Support Function.
 - ... any type of business work or process you imagine can be built from a Universal Object.
 
-### **Object Attributes / Thuộc Tính Của Đối Tượng Phổ Quát & Loại Việc**
+### **Object Attributes**
 
-#### **Two Core Components / Hai Yếu Tố Cấu Thành**
+#### **Two Core Components**
 
 An Object type is defined by two main components:
 
 - **Workflow:** consists of Statuses and Transitions between them, visually representing how the work process flows within that Object type.
 - **Data fields & screens:** custom-defined Data fields to capture the necessary information for that Object type. These fields are arranged into a Screen layout, which is then assigned to the Object type.
 
-#### **Two Levels of Object Types / Hai Cấp Độ Của Loại Việc**
+#### **Two Levels of Object Types**
 
 - **Standard object types:** the primary level of an Object type, which is always required.
 - **Sub-object types:** created under a standard type (when needed), used to break down larger types into smaller, more specific ones.
 
-#### **Object Connections / Kết Nối Đầu Việc**
+#### **Object Connections**
 
 Object types (and their Objects) can be connected to form wide-ranging workflows or express specific task-level dependencies. There are 3 types of connections:
 
@@ -136,7 +44,7 @@ Object types (and their Objects) can be connected to form wide-ranging workflows
 - **Object field**: A type of Data field configured for an Object type within a Function, allowing one Object to select and store references to one or more other Objects based on predefined filtering criteria.
 - **Parent–child connection**: A a built-in connection used exclusively to represent the relationship between a standard Object type and its sub-Object types beneath it.
 
-### **Unified & Universal Platform / Hệ Thống Hợp Nhất & Phổ Quát**
+### **Unified & Universal Platform**
 
 All business functions and work data in Luklak are built from Universal Objects, unlike traditional packaged software, where features are hardcoded into rigid SQL-based modules. This foundation powers Luklak's Unified & Universal architecture enabling seamless execution of all operations within a single, natural system:
 
@@ -147,22 +55,18 @@ All business functions and work data in Luklak are built from Universal Objects,
 - **Unified Inbox & Notification:** Centralizes all Updates and Notifications from every Space into a single view stay on top of everything without jumping across apps or modules.
 - **Unified Application:** Every Function works instantly across both desktop and mobile no need to build separate mobile apps.
 
-## **WORKFLOW & STATUS / LUỒNG TIẾN TRÌNH & TRẠNG THÁI**
+## **WORKFLOW & STATUS**
 
-### 
-
-### 
-
-### **Overview / Tổng Quan**
+### **Overview**
 
 - A workflow is defined for each Object type within a Function, consisting of Statuses and Transitions that represent how work progresses.
 - All Objects created inside a Space follow the workflow defined in the corresponding Function.
 - Object statuses can be used for UQL queries, data filtering, reporting, and can also integrate with automation if needed.
 - Custom statuses are managed in Global Admin and can be reused across multiple Functions and Object types.
 
-### **Workflow & Statuses / Luồng Tiến Trình & Trạng Thái**
+### **Workflow & Statuses**
 
-#### **Workflow Components / Thành Phần Luồng Tiến Trình**
+#### **Workflow Components**
 
 Workflow consists of two elements:
 
@@ -171,51 +75,49 @@ Workflow consists of two elements:
 
 Together, statuses and transitions form a clear and structured workflow.
 
-#### **Status Categories / Loại Trạng Thái**
+#### **Status Categories**
 
 - All statuses can be freely created by users, but each must be assigned to one of the system's fixed status categories: Open, Planned, Active, Completed, Idle, Cancelled.
 - Each status inherits the color of its category, allowing users to visually recognize the stage at a glance.
 - Statuses can be queried, filtered, and reported on based on these fixed categories.
 
-#### **Workflow Guide / Hướng Dẫn Tiến Trình**
+#### **Workflow Guide**
 
 - Each status in a workflow can include step-specific instructions written during Function setup.
 - When users work on an Object, they can easily view these guidelines — both on desktop and mobile.
 
-### **Advanced Settings / Cài Đặt Nâng Cao**
+### **Advanced Settings**
 
 Advanced configurations per Status:
 
-#### **Permissions / Phân Quyền**
+#### **Permissions**
 
 - Only assigned users/groups can transition to a Status.
 - Permissions can be granted via: User account, Group, User field, Group field, Role, Space component.
-
-
 - Chỉ những người nhất định mới được chuyển sang Trạng thái này.
 - Cấp quyền qua: Tài khoản Người dùng, Nhóm, Trường Người dùng, Trường Nhóm, Vai trò, Thành phần mảng việc.
 
-#### **Conditions / Điều Kiện**
+#### **Conditions**
 
 - Validate Field values before allowing transition to a Status.
 - Supported Fields: Data fields, Checklist, Subtasks, Linked Objects.
 
 **Input Screen:** Each Status can trigger an Input Screen to collect required data fields.
 
-#### **Automation / Tự Động Hóa**
+#### **Automation**
 
 - Automated actions can be triggered on Status change — update fields, create Objects, send emails or messages.
 - Workflow automation rules are one type of automation rule, specifically tied to Status transitions — alongside other types like Background rules or Action-triggered Rules in the Automation menu.
 
-### **Advanced Usage / Cách Dùng Nâng Cao**
+### **Advanced Usage**
 
-#### **Query & Reporting / Truy Vấn & Báo Cáo**
+#### **Query & Reporting**
 
 - **Current:** All current Statuses and Status categories can be queried, filtered, and reported across all Functions and Spaces.
 - **History:** query the history of which Statuses an Object has been in and how it transitioned between them. Operators: Was in, Was not in, Changed from, Not changed from.
 - **Use case:** report on conversion rates between Statuses in a sales flow — for example, how many customer moved from Initial consultation to Appointment scheduled.
 
-#### **Actor/ Acting Account / Tài Khoản Thực Thi**
+#### **Actor/ Acting Account**
 
 Each automation rule can specify the Acting account used for querying data and performing the automated actions, with 2 types:
 
@@ -224,11 +126,7 @@ Each automation rule can specify the Acting account used for querying data and p
 
 **Trigger other automation rules:** determines whether the automated action in this rule can be used as a trigger for other automation rules.
 
-## **DATA FIELD & SCREEN / TRƯỜNG DỮ LIỆU & MÀN HÌNH**
-
-### 
-
-### 
+## **DATA FIELD & SCREEN**
 
 ### **Overview / Tổng Quan**
 
@@ -237,19 +135,19 @@ Each automation rule can specify the Acting account used for querying data and p
 - Field values can be used in UQL, Filters, Dashboards, and Automation.
 - Custom fields are managed in Global Admin and can be reused across multiple Functions and Object types.
 
-### **Field Types / Các Loại Trường**
+### **Field Types**
 
-#### **Basic Field Types / Loại Trường Cơ Bản**
+#### **Basic Field Types**
 
 Integer, Decimal, Date, Date & Time, Phone number, Single email, Multiple emails, Single line text, Paragraph text, Single checkbox, Multiple checkboxes, Dropdown (single select), Dropdown (multi select)
 
-#### **Advanced Field Types / Loại Trường Nâng Cao**
+#### **Advanced Field Types**
 
 - **Single user, Multiple users, Single group, Multiple groups:** store User accounts or groups as values like any other field, but these can also be used in Permission and Notification schemes.
 - **Single object, Multiple objects:** link to related Objects; can be filtered using UQL to limit selectable Objects by specific criteria.
 - **Formula:** calculate a result based on numeric fields within the same Object.
 
-#### **Data table field / Trường Bảng dữ liệu**
+#### **Data table field**
 
 This is a special field type with powerful capabilities and wide applications, so it is described separately below.
 
@@ -262,7 +160,7 @@ The Table field becomes especially powerful when combined with Automation action
 - Inventory & Orders: Objects in the Inventory Function store information about available items. When the Sales team creates an Order Object, they can pull item data from Inventory Objects into a table. Each item added to the order with quantity X will trigger an automation rule that subtracts X from the stock quantity field in the corresponding Inventory Object.
 - Students & Classes: The Student Function contains Objects that store individual student information. When creating a Class Object, the user can reference Student Objects and populate the table with their data accordingly.
 
-#### **Field Configuration / Cài Đặt Trường**
+#### **Field Configuration**
 
 Each field type comes with its own settings, such as:
 
@@ -271,14 +169,14 @@ Each field type comes with its own settings, such as:
 - Data input validation
 - Multilingual field name
 
-### **Data Screen in Function / Màn Hình Trong Chức Năng**
+### **Data Screen in Function**
 
-#### **Data screen for Object type/ Màn hình dữ liệu cho Loại việc**
+#### **Data screen for Object type**
 
 - Each **Object type** in a Function must be paired with a Data screen (alongside its Workflow). Different Object types within the same Function can share the same screen.
 - The **Data screen** contains all the Data fields tied to the Object type and will be displayed inside each corresponding Object in the Space.
 
-#### **System-defined fields with Required toggle / Trường dữ liệu mặc định với tuỳ chọn Bắt buộc**
+#### **System-defined fields with Required toggle**
 
 - Each screen includes predefined fields that are always visible and come with a built-in Required toggle:
 - Start date, Due date, Reminder date
@@ -288,7 +186,7 @@ Each field type comes with its own settings, such as:
 - Space Component
 - The above User and Group fields are often used in configuring Permission and Notification Schemes.
 
-#### **System-defined fields with Visibility toggle / Trường dữ liệu mặc định với tuỳ chọn Hiển thị**
+#### **System-defined fields with Visibility toggle**
 
 - Each screen also includes specific system fields with built-in toggles to control visibility and usage:
 - Description: rich text block shown prominently on the Object
@@ -298,13 +196,13 @@ Each field type comes with its own settings, such as:
 - Attachments: attach files to the Object
 - Live photo: capture real-time photos from the mobile app; each photo is auto-tagged with time, location, and user — often used for verification, acceptance, or reporting purposes.
 
-### **Field Data on Objects & Usage / Dữ Liệu Của Trường Trên Đầu Việc & Sử Dụng**
+### **Field Data on Objects & Usage**
 
-#### **Working with Objects / Đầu Việc & Làm Việc**
+#### **Working with Objects**
 
 When creating and managing Objects inside a Space (which is generated from a Function), users can update, store, and access field data directly within those Objects.
 
-#### **Filters, Queries & Dashboards / Tìm Lọc, Truy Vấn & Báo Cáo**
+#### **Filters, Queries & Dashboards**
 
 Universal Query Language (UQL) enables querying across all user-defined fields (as well as system data). This forms the foundation for key features:
 
@@ -312,7 +210,7 @@ Universal Query Language (UQL) enables querying across all user-defined fields (
 - **Saved filters:** store reusable filtering criteria to extract Objects based on specific conditions useful for daily tracking and easily shareable.
 - **Universal dashboards:** aggregate Object data across multiple Functions and Spaces into seamless, cross-functional visual dashboards.
 
-#### **Automation / Tự Động Hoá**
+#### **Automation**
 
 These data fields are also deeply integrated into Automation:
 
@@ -320,16 +218,16 @@ These data fields are also deeply integrated into Automation:
 - Automation rules can perform actions that update field values.
 - Smart values from related Objects can be referenced for dynamic processing and calculations.
 
-### **Auto Fields / Trường Tự Động**
+### **Auto Fields**
 
 These fields are predefined by the system and automatically update their values. They cannot be modified by anyone.
 
-#### **Object key / Mã đầu việc**
+#### **Object key**
 
 - When an Object is created within a Space, the system automatically generates its Object key in the format: “SPACE_CODE \+ Sequential number”, e.g., “CRM-1234”. This is a unique identifier across the entire system.
 - The Object key value is stored on the Object like any other data field. It can be queried, searched, and used to retrieve information, but its value cannot be modified by anyone.
 
-#### **Auto Fields on Each Object / Trường Tự Động Trên Đầu Việc**
+#### **Auto Fields on Each Object**
 
 Every Object includes the following system-generated fields, which are automatically updated and available for query, filtering, and reporting:
 
@@ -340,7 +238,7 @@ Every Object includes the following system-generated fields, which are automatic
 - **interacted:** latest timestamp among the four fields above.
 - **creator:** the user who created the Object.
 
-### **Global Management / Quản Trị Ở Toàn Cục**
+### **Global Management**
 
 Global values such as Data fields, Statuses, and Object types that share common characteristics:
 
@@ -348,21 +246,19 @@ Global values such as Data fields, Statuses, and Object types that share common 
 - Reused across Functions / Object types.
 - Enable global querying, filtering and reporting across all Objects from various Spaces, Functions.
 
-## **AUTOMATION / TỰ ĐỘNG HOÁ**
+## **AUTOMATION**
 
-### 
-
-### **Overview / Tổng Quan**
+### **Overview**
 
 - Connects and automates processes across all Functions in the Luklak system, including integration with external apps when needed.
 - Core principle: Trigger – Condition – Action. In simple terms: When event A happens – Check condition B – Execute action C.
 - Location: created in Functions, Workflows, Spaces, Areas, or Global Folder, depending on the intended scope of impact.
 
-### **Triggers & Automation Rule Types / Cách Kích Hoạt & Các Loại Quy Tắc Tự Động**
+### **Triggers & Automation Rule Types**
 
 There are 3 types of triggers that activate automation rules, corresponding to 3 categories of rules:
 
-#### **Silent (trigger & rule) / Chạy Ngầm (kích hoạt & quy tắc)**
+#### **Silent (trigger & rule)**
 
 Listens for events, checks conditions, and automatically executes actions when conditions are met without requiring user interaction:
 
@@ -370,21 +266,21 @@ Listens for events, checks conditions, and automatically executes actions when c
 - **Schedule:** based on scheduled time, hour, day, month.
 - **Incoming Webhooks:** from external apps.
 
-#### **Workflow (trigger & rule) / Luồng Tiến Trình (kích hoạt & quy tắc)**
+#### **Workflow (trigger & rule)**
 
 - Configured on Workflow Statuses inside Function.
 - Executes when users transition into a specific Status.
 
-#### **Object Action (trigger & rule) / Hành Động Trên Đầu Việc (kích hoạt & quy tắc)**
+#### **Object Action (trigger & rule)**
 
 - Add action menus to Objects so users can manually trigger them from the Object toolbar
 - Visibility of each action can be configured by Object type, Status, User, or Group
 
-#### **Standalone Actions (coming soon) / Hành Động Độc Lập (sắp làm)**
+#### **Standalone Actions (coming soon)**
 
 Create independent action menus at the Space, Area, or Function level, not tied to any Object.
 
-### **Filter conditions & execution flows / Điều kiện lọc & luồng chạy**
+### **Filter conditions & execution flows**
 
 Beyond using UQL to filter and check whether an Action should run, multiple flow types are available:
 
@@ -402,7 +298,7 @@ Once conditions are met, the automation rule can perform a variety of actions, s
 - **External messaging:** Send via Zalo ZNS, Email.
 - **Integration:** Send HTTP Requests to external apps.
 
-### **Dynamic data processing / Xử lí dữ liệu động**
+### **Dynamic data processing**
 
 Automation enables dynamic data retrieval across multiple Objects for logic-driven processing, advanced calculations, and transformation.
 
@@ -410,43 +306,41 @@ Automation enables dynamic data retrieval across multiple Objects for logic-driv
 - **Velocity**: can also be used directly within Luklak Automation to handle more advanced requirements
 - **Javascript/Python via N8n**: when connecting through N8n, you can write custom code in Javascript or Python to handle complex technical logic, then return results back to Luklak or forward to external apps
 
-### **External app integrations / Kết nối tích hợp app ngoài**
+### **External app integrations**
 
 In addition to automating work across different Functions within Luklak, Automation can also integrate with external apps to serve as a unified operations hub
 
-#### **Webhook & Http request / Webhook & Http request**
+#### **Webhook & Http request**
 
 Luklak Automation comes with built-in support for two-way data integration, allowing you to connect with any app that supports public webhook or HTTP endpoints.
 
 - **Receive Webhook**: accept incoming data from external apps to trigger automation rules or ingest data into Luklak
 - **Send HTTP Request**: push data from Luklak to external apps through outbound HTTP calls
 
-#### **Omnichannel Communication / Giao Tiếp Đa Kênh**
+#### **Omnichannel Communication**
 
 Automation includes built-in multi-channel communication to interact with external parties (e.g. customers, partners…)
 
 - **Email**: send emails with prewritten content and auto-filled data from specific Objects
 - **Zalo ZNS**: send notification messages to Zalo phone numbers via Zalo’s official ZNS service
 - **VOIP calling**: initiate phone calls to numbers stored in Objects via cloud-based call center systems
-- VOIP Integration with AI-Powered Call Analysis: VOIP calling: initiate phone calls to numbers stored in Objects. The call center automatically returns call data and logs it to the corresponding Object, enabling call reporting. With AI integration: speech from the call can be transcribed to text, allowing for automatic summarization and analysis using AI prompts.
+- **VOIP Integration with AI-Powered Call Analysis**: VOIP calling: initiate phone calls to numbers stored in Objects. The call center automatically returns call data and logs it to the corresponding Object, enabling call reporting. With AI integration: speech from the call can be transcribed to text, allowing for automatic summarization and analysis using AI prompts.
 
-#### **Bank Transaction Updates via Sepay Integration / Cập nhật biến động số dư tài khoản ngân hàng qua Sepay**
-
-**English:**
+#### **Bank Transaction Updates via Sepay Integration**
 
 - Sepay is a middleware service that connects with banks. When an account experiences a balance change, Sepay sends a webhook to Luklak, which can trigger an Automation rule to process the transaction and update the system accordingly.
 - Automation rules can be designed to generate payment links and QR codes from Sepay. These links can include recipient bank account details, payment amounts, and optionally a unique identifier (such as an Object code, email, or phone number) to help identify the customer and the payment context. This link can then be shared with the customer for payment.
 - When Luklak Automation receives a webhook with balance update details from Sepay, it can extract the unique identifier and locate the matching Object to update the received payment amount.
 
-#### **n8n as Integration Hub / N8n trung gian kết nối**
+#### **n8n as Integration Hub**
 
 - N8n is an external integration hub that comes with built-in login authentication and standard actions to interact with popular apps worldwide, along with low-code capabilities for writing Javascript or Python to handle advanced requirements.
 - Through Webhook/HTTP request, Luklak can integrate two-way with n8n, enabling near-universal connectivity to the world’s major software systems as well as integration with specific software commonly used in Vietnam
 - N8n is a specific example. Luklak can also connect with any similar integration tools such as Zapier, [Make.com](http://Make.com), and others
 
-### **Luklak Universal Automation / Luklak Universal Automation**
+### **Luklak Universal Automation**
 
-#### **Packaged Software like Base, Misa, 1Office / Phần Mềm Đóng Gói Như Base, Misa, 1Office**
+#### **Out-of-the-box softwares**
 
 - Each function is a separate app/module with its own data structure and business logic isolated and rigid.
 - Impossible to create a universal automation layer that can connect, interact, and process these objects seamlessly.
@@ -460,51 +354,45 @@ Automation includes built-in multi-channel communication to interact with extern
 - Automation actions are deeply integrated by design, and every functional dataset automatically inherits these powerful capabilities.
 - Combines native low-code power within Luklak with the ability to connect to N8n for additional Javascript/Python scripting to handle advanced scenarios.
 
-### **Execution & Security / Thực Thi & Bảo Mật**
+### **Execution & Security**
 
-#### **Acting Account / Tài Khoản Thực Thi**
+#### **Acting Account**
 
 Every automation rule must be executed via an Acting account, with two types:
 
 - **User Account:** Executes using the account of the person who set the rule. Suitable for lightweight personal use; not recommended for operations involving other users with different permissions.
 - **Functional Account:** technical accounts created solely to execute Automation with secured permissions. These accounts have no passwords and cannot be used for login or regular work.
 
-#### **Triggering Other Rules / Kích Hoạt Quy Tắc Khác**
+#### **Triggering Other Rules**
 
 Automated actions inside a rule will generate Update Events, and those Events can optionally be used as Triggers to activate other rules:
 
 - **Enable:** allow this rule to trigger other rules, creating a connected automation chain.
 - **Disable:** prevent this rule from triggering others often used to avoid infinite trigger loops.
 
-#### **Notifications for Automated Actions / Thông Báo Cho Hành Động Tự Động**
+#### **Notifications for Automated Actions**
 
 Automated actions still generate Update events just like manual actions performed by users. You can choose to Enable or Disable sending Notifications for these Updates:
 
 - **Enable:** Notifications are sent as usual, helping you stay informed about every action.
 - **Disable:** No notifications are sent recommended for frequent automated actions to avoid notification overload.
 
-#### **Activity Log / Lịch Sử Chạy**
+#### **Activity Log**
 
 All automation rules keep a run history to:
 
 - Track the number of automatic runs.
 - Review and audit logs when issues occur.
 
-## **WORKVIEW, DASHBOARD, FILTER, UQL / GIAO DIỆN LÀM VIỆC, BÁO CÁO, BỘ LỌC, UQL**
+## **WORKVIEW, DASHBOARD, FILTER, UQL**
 
-### 
-
-### 
-
-### 
-
-### **Overview / Tổng Quan**
+### **Overview**
 
 - **Workviews:** Data from multiple Objects is aggregated and visually presented in various ways depending on specific needs, forming screens for daily work. All Workviews below can be easily created and customized.
 - **Location:** Workviews created at the Function level are available across all Spaces generated from that Function. They can also be created specifically for individual Spaces.
 - **Unified & universal:** Since all Functions and work data are built from the same Universal Object, it's easy to create cross-functional Workviews and consolidated dashboards through drag-and-drop.
 
-### **Workviews / Giao Diện Làm Việc**
+### **Workviews**
 
 Common ways of presenting Object data for daily use, highly customizable based on user needs:
 
@@ -514,13 +402,13 @@ Common ways of presenting Object data for daily use, highly customizable based o
 - **Timeline:** visual progress over time.
 - **Updates:** activity updates on Objects.
 
-### **Dashboard / Báo Cáo**
+### **Dashboard**
 
-#### **Dashboards vs. Workviews / Báo Cáo & Giao Diện Làm Việc**
+#### **Dashboards vs. Workviews**
 
 While Workviews focus on visually presenting Objects for direct interaction and daily execution, Dashboards serve a different purpose aggregating and calculating data for deeper analysis and broader insights.
 
-#### **Data Sources for Dashboard / Dữ Liệu Báo Cáo**
+#### **Data Sources for Dashboard**
 
 - All business data in Luklak across different Functions is built on the same Universal Object model. This allows dashboards to pull data instantly without the need for complex and costly ETL (Extract - Transform - Load) processes like in traditional modular packaged software.
 - Users can select data sources from multiple Functions and Spaces, or simply use UQL (Universal Query Language) to query, filter, aggregated and calculate data across the entire system.
@@ -529,7 +417,7 @@ While Workviews focus on visually presenting Objects for direct interaction and 
   - Data input per dashboard page.
   - Data input per gadget within each page.
 
-#### **Data visualization gadgets / Các khối trình bày dữ liệu trực quan**
+#### **Data visualization gadgets**
 
 Once data is aggregated, it can be presented through various visual gadgets to help users quickly understand and analyze the current work status.
 
@@ -539,43 +427,41 @@ Once data is aggregated, it can be presented through various visual gadgets to h
 - **Object lists**: insert key Object lists directly into the dashboard alongside aggregated data, enabling quick context and direct task handling.
 - **Activity updates**: embed activity streams from selected data flows into the dashboard view, allowing users to track updates and take action in real time.
 
-#### **Quick Filter / Thanh Lọc Nhanh**
+#### **Quick Filter**
 
 Each dashboard can have its own customizable Quick filters, allowing users to instantly explore and drill into relevant segments of the data.
 
-#### **Work Directly from Dashboard / Làm Việc Trực Tiếp Từ Báo Cáo**
+#### **Work Directly from Dashboard**
 
 With Luklak's unified and universal structure, dashboards are no longer isolated views built separately just for monitoring or analysis they live organically with ongoing work. Users can click on any data point in a dashboard to:
 
 - Open the specific Object behind it for direct review and action.
 - Or open a list of related Objects that serve as the data source powering that part of the dashboard display.
 
-### **Saved Filters & Quick Filter Bar / Bộ Lọc Lưu Sẵn & Thanh Lọc Nhanh**
-
-#### **Quick Filter Bar / Thanh Lọc Nhanh**
+### **Saved Filters & Quick Filter Bar**
 
 - A top-of-screen bar used to quickly search and narrow down visible data in Workviews and Dashboards.
 - The system always includes this default Quick filter bar. Users can also customize filter criteria to fit each specific Workview or Dashboard.
 
-#### **Saved Filters / Bộ Lọc Lưu Sẵn**
+#### **Saved Filters**
 
 - Reusable sets of filter criteria that extract Objects based on specific characteristics or working scenarios. Easy to share with others.
 - Can be configured to send scheduled alerts and notifications to relevant users.
 
-### **UQL Universal Query Language / UQL Ngôn Ngữ Truy Vấn Phổ Quát**
+### **UQL Universal Query Language**
 
-#### **Nature of UQL / Tính Chất Của UQL**
+#### **Nature of UQL**
 
 - All task and business data created by users across different Functions in Luklak are built on the Universal Object, which comes with a built-in, unified querying language: UQL (Universal Query Language).
 - UQL allows querying, filtering, and aggregating all data across Functions within the entire Luklak system.
 - Queryable elements include: Functions, Spaces, Object types, Data fields, Workflow statuses, and Space components.
 
-#### **Two Usage Modes / Hai Chế Độ Sử Dụng**
+#### **Two Usage Modes**
 
 - **Visual interface:** Users can build filters using a simple, drag-and-drop graphical UI no coding required. This powers features like Quick filter bars and most built-in filtering tools.
 - **Advanced scripting:** For complex use cases, users can write UQL expressions directly in code for greater control and flexibility.
 
-#### **Specific Use Cases / Các Ứng Dụng Cụ Thể**
+#### **Specific Use Cases**
 
 Any feature that requires querying, filtering, or aggregating data is powered by UQL. Typical use cases include:
 
@@ -585,31 +471,31 @@ Any feature that requires querying, filtering, or aggregating data is powered by
 - Filtering and branching conditions in Automation.
 - Other features involving data filtering and aggregation.
 
-## **PERMISSION & NOTIFICATION SCHEME / PHƯƠNG ÁN PHÂN QUYỀN & THÔNG BÁO**
+## **PERMISSION & NOTIFICATION SCHEME**
 
 Permission & Notification Schemes define who can do what and who will be notified on each Object. These schemes are configured once at the global level and selected by Functions, then automatically apply to Objects inside Spaces created from those Functions.
 
-### **Actions / Hành Động**
+### **Actions**
 
 - **Space (permission only):** View Space.
 - **Object:** View, Create, Delete, Edit, Connect, Assign People & Date.
 - **Attachments on Object:** Add files, Delete own files / Delete others' files.
 - **Chat on Object:** Send messages, Delete own messages / Delete others' messages.
 
-### **Recipients / Người Nhận**
+### **Recipients**
 
 - User Account & Functional Account.
 - User Group & automatic All Members Group.
 - User Field & Group Field on Object.
 - Roles with users & groups assigned in Area & Space.
 
-## **ROLE / VAI TRÒ**
+## **ROLE**
 
 - A Role typically represents a specific type of responsibility and is defined at both the Global and Function level.
 - Each Role is assigned a set of permissions and notifications through the Permission & Notification Scheme.
 - When a Space is created from a Function, users and groups are assigned to specific Roles within the Space, automatically inheriting the appropriate permissions and notifications for the Objects inside.
 
-### **Types of Roles / Các Loại Vai Trò**
+### **Types of Roles**
 
 - **Global roles:** Automatically apply to all Functions, with three default roles: Member, Manager, and Admin. You can create additional roles if needed.
 - **Function roles:** Defined within a specific Function and used only in that Function.
@@ -618,7 +504,7 @@ Permission & Notification Schemes define who can do what and who will be notifie
 
 Supports two-way data exchange, ready to connect with any app that has open integration endpoints.
 
-#### **N8n as Integration Hub / N8n Trung Gian Kết Nối**
+#### **N8n as Integration Hub**
 
 - N8n is an external integration hub that comes with built-in login authentication and standard actions to interact with popular apps worldwide, along with low-code capabilities for writing Javascript or Python to handle advanced requirements.
 - Through Webhook/HTTP request, Luklak can integrate two-way with n8n, enabling near-universal connectivity to the world's major software systems as well as integration with specific software commonly used in Vietnam.

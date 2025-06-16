@@ -1,0 +1,96 @@
+---
+title: "Tổng quan Thiết kế chức năng"
+description: "Description of your new file."
+---
+
+## **FUNCTION / CHỨC NĂNG**
+
+A Function is the blueprint that defines the operational logic of a specific business operations module in Luklak NoCode & LowCode platform. From each Function, Spaces are created for actual work — running exactly as designed in the original Function logic.
+
+### **Object Types & Universal Object / Loại Việc & Đối Tượng Phổ Quát**
+
+Each Function defines its own Object types, representing different kinds of business work or processes. These specific Object types are created from the Universal Object, the core abstraction behind the Luklak NoCode & LowCode system. When a Space is created from a Function, Objects can be created within the Space according to the structure and logic of the Object types defined in that Function.
+
+#### **Two Core Components / Hai Yếu Tố Cấu Thành**
+
+An Object type is defined by two main components:
+
+- **Workflow:** consists of Statuses and Transitions between them, visually representing how the work process flows within that Object type.
+- **Data fields & screens:** custom-defined Data fields to capture the necessary information for that Object type. These fields are arranged into a Screen layout, which is then assigned to the Object type.
+
+#### **Two Levels of Object Types / Hai Cấp Độ Của Loại Việc**
+
+- **Standard object types:** the primary level of an Object type, which is always required.
+- **Sub-object types:** created under a standard type (when needed), used to break down larger types into smaller, more specific ones.
+
+#### **Object Connections / Kết Nối Đầu Việc**
+
+Object types (and their Objects) can be connected to form wide-ranging workflows or express specific task-level dependencies. There are 3 types of connections:
+
+- **Global object connection**: Configured at the global level, this defines which Object types can be linked together through a specific connection type. These links are reusable across all Functions and Spaces.
+- **Object field**: A type of Data field configured for an Object type within a Function, allowing one Object to select and store references to one or more other Objects based on predefined filtering criteria.
+- **Parent–child connection**: A a built-in connection used exclusively to represent the relationship between a standard Object type and its sub-Object types beneath it.
+
+### **Automation / Tự Động Hóa**
+
+Acts as the processing brain that connects and automates information flow across Functions within the unified Luklak system, with support for external integration. Core principle: Trigger – Condition – Action. Or more simply: When A happens – check for B – then do C.
+
+#### **Three Types of Automation Rules / Ba Loại Quy Tắc Tự Động**
+
+There are three types of automation rules, corresponding to four triggering methods:
+
+- **Background rules:** Triggered by system events such as object creation/update, schedules, or incoming external webhooks.
+- **Workflow rules:** Run when an object changes status within a workflow.
+- **Object action rules:** Shown in the object detail menu, allowing users to manually trigger automation.
+- **Standalone actions (coming soon):** Create independent action menus at the Space, Area, or Function level, not tied to any Object.
+
+#### **Powerful Capabilities / Khả Năng Sâu Rộng**
+
+- **Unified & universal automation:** Connects and processes all Objects and data across Functions in the system.
+- **Smart values:** Dynamically retrieve, calculate, and transform data before updates.
+- **Built-in multi-channel communication:** email, Zalo, voice systems, etc.
+- **Webhook / HTTP Request:** Enables full two-way integration with external apps, especially via N8N.
+- **Low-code support:** Use Velocity in Luklak, or JavaScript / Python via N8N to handle complex logic.
+
+### **Workview, Dashboard, Filter / Giao Diện Làm Việc, Báo Cáo, Bộ Lọc**
+
+Data from multiple Objects is aggregated and visually presented in different ways based on needs forming screens for users to work with. The following utilities and features can all be created and customized with ease.
+
+#### **Workview / Giao Diện Làm Việc**
+
+List, Kanban, Calendar, Timeline
+
+#### **Dashboards / Báo Cáo**
+
+- Query and aggregate data across all Functions using Universal Query Language (UQL).
+- Display data with various gadget types: Charts, Counters & Calculations, 1D/2D Statistics, Object Lists, and Activity Updates.
+- Filter controls can be customized for convenient data interaction.
+
+**Filters / Bộ Lọc**
+
+- UQL enables searching and aggregating across all Object data, including user-defined fields.
+- Quick filter bar: instantly refine data shown on Workviews.
+- Saved filters: predefined filter sets for recurring needs – reusable, shareable, and capable of sending automated alerts listing matching Objects.
+
+### **Permission & Notification Scheme / Phương Án Phân Quyền & Thông Báo**
+
+Define in detail over 20 actions who has permission to perform them and who will receive notifications. Four predefined system schemes are available by default and can be used in most cases. Users can also create and customize their own schemes as needed. Select a Scheme created at the global level to assign it to a Function, with the option to extend it using additional configurations at the Function level.
+
+### **Role / Vai Trò**
+
+Role acts as a bridge between the Permission & Notification Scheme of a Function and the specific users in the Spaces created from that Function. Two types of Roles:
+
+- **Global roles:** automatically apply to all Functions.
+- **Function roles:** created specifically for a single Function.
+
+### **Item Access / Truy Cập Tiện Ích**
+
+Control who can edit this Function using the Item access mechanism. 3 levels: Member, Manager, and Admin.
+
+### **Actions with Function / Sử Dụng Chức Năng**
+
+Once a Function blueprint is completed, it can be used in several ways:
+
+- Create Spaces from the Function to execute actual work.
+- Export the Function to a file and import it into another Business.
+- Or create a new Function from the prebuilt template library.
