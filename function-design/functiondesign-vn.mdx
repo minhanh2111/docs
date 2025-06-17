@@ -3,27 +3,27 @@ title: "Thiết kế chức năng (VN)"
 description: "Description of your new file."
 ---
 
-## **<Tooltip tip="Function">CHỨC NĂNG</Tooltip>**
+## **CHỨC NĂNG**
 
 Chức năng là bản thiết kế định hình logic vận hành của một phạm trù nghiệp vụ công việc nhất định trong nền tảng Luklak NoCode & LowCode. Từ mỗi Chức năng sẽ tạo ra các Mảng việc để làm việc thực tế theo đúng logic đã thiết kế ở Chức năng.
 
-### **<Tooltip tip="Object Type">Loại Việc</Tooltip> & <Tooltip tip="Universal Object">Đối Tượng Phổ Quát</Tooltip>**
+### **Loại Việc & Đối Tượng Phổ Quát**
 
 Trong mỗi Chức năng sẽ định nghĩa các Loại việc tương ứng với các kiểu nghiệp vụ - công việc khác nhau. Loại việc cụ thể này được tạo nên từ Đối tượng Phổ quát là yếu tố trừu tượng hóa cốt lõi của hệ thống Luklak NoCode & LowCode. Khi Mảng việc được tạo ra từ bản thiết kế Chức năng, thì có thể tạo các Đầu việc để làm việc trong Mảng việc tương ứng với thiết kế của các Loại việc trong Chức năng.
 
-#### **<Tooltip tip="2 core components">Hai Yếu Tố Cấu Thành</Tooltip>**
+#### **Hai Yếu Tố Cấu Thành**
 
 Loại việc được cấu tạo nên từ 2 thành tố:
 
 - **Luồng tiến trình:** bao gồm các Trạng thái và Bước chuyển giữa các trạng thái đó, thể hiện trực quan luồng quy trình của Loại việc đó diễn ra như nào.
 - **Trường dữ liệu & Màn hình:** các Trường dữ liệu do người dùng tự tạo ra để đáp ứng nhu cầu lưu trữ thông tin của Loại việc đó. Các Trường dữ liệu được được sắp xếp hiển thị trong một Màn hình để gán cho một Loại việc.
 
-#### **<Tooltip tip="Two Levels of Object Types">Hai Cấp Độ Của Loại Việc</Tooltip>**
+#### **Hai Cấp Độ Của Loại Việc**
 
 - **Loại việc tiêu chuẩn:** đây cấp độ chính của Loại việc, luôn cần có cấp độ này.
 - **Loại việc con:** được tạo sau và nằm dưới Loại việc tiêu chuẩn (trong trường hợp cần dùng), dùng để chia các Loại việc lớn thành các Loại việc nhỏ hơn bên dưới.
 
-#### **<Tooltip tip="Object Connections">Kết Nối Đầu Việc</Tooltip>**
+#### **Kết Nối Đầu Việc**
 
 Các Loại việc và Đầu việc tạo ra từ đó có thể kết nối với nhau tạo nên quy trình nghiệp vụ sâu rộng hơn hoặc tạo sự liên quan giữa các Đầu việc với nhau để có cái nhìn tổng thể. Có 3 cách tạo ra sự kết nối:
 
@@ -31,11 +31,11 @@ Các Loại việc và Đầu việc tạo ra từ đó có thể kết nối v�
 - **Trường Đầu việc:** là một loại Trường dữ liệu cài đặt cho Loại việc ở trong Chức năng, cho phép đứng ở một Đầu việc này có thể chọn và lưu giá trị là một hoặc nhiều Đầu việc khác theo tiêu chí lọc đã cài đặt trước.
 - **Loại việc Cha - con**: là một Loại kết nối đặc biệt được định nghĩa trước bởi hệ thống, dành riêng cho mối quan hệ giữa Đối tượng tiêu chuẩn và Đối tượng con nằm dưới nó.
 
-### **<Tooltip tip="Automation">Tự Động Hóa</Tooltip>**
+### **Tự Động Hóa**
 
 Là bộ não kết nối và xử lý thông tin tự động xuyên Chức năng trên hệ thống Luklak hợp nhất, có thể kết nối với bên ngoài. Nguyên tắc: Trigger - Condition - Action. Câu mô tả gần gũi hơn: Nếu sự kiện A diễn ra - Kiểm tra thêm điều kiện B - Thực hiện hành động C.
 
-#### **<Tooltip tip="Three Types of Automation Rules">Ba Loại Quy Tắc Tự Động</Tooltip>**
+#### **Ba Loại Quy Tắc Tự Động**
 
 Có 4 loại quy tắc tự động hóa tương ứng với 4 cách để kích hoạt (trigger):
 
@@ -52,42 +52,42 @@ Có 4 loại quy tắc tự động hóa tương ứng với 4 cách để kích
 - **Webhook/ Http request:** cho phép tích hợp 2 chiều với phần mềm khác, đặc biệt là khi kết nối qua N8N.
 - **Lowcode:** với Velocity trong Luklak,và Javascript/ Python qua N8N để xử lý mọi nhu cầu code phức tạp.
 
-### **<Tooltip tip="Workview, Dashboard, Filter">Giao Diện Làm Việc, Báo Cáo, Bộ Lọc</Tooltip>**
+### **Giao Diện Làm Việc, Báo Cáo, Bộ Lọc**
 
 Dữ liệu nhiều Đầu việc sẽ được tổng hợp và trình bày trực quan theo các cách khác nhau tuỳ theo nhu cầu, tạo ra màn hình cho người dùng làm việc. Các tiện ích tính năng dưới đây đều có thể tự tạo và tuỳ biến dễ dàng.
 
-#### **<Tooltip tip="Workview">Giao Diện Làm Việc</Tooltip>**
+#### **Giao Diện Làm Việc**
 
 Danh sách, Kanban, Lịch, Dòng thời gian
 
-#### **<Tooltip tip="Dashboards">Báo Cáo</Tooltip>**
+#### **Báo Cáo**
 
 - Truy vấn và tổng hợp mọi dữ liệu xuyên nghiệp vụ với Ngôn ngữ Truy vấn Phổ quát (UQL).
 - Trình theo nhiều dạng Gadget khác nhau: Biểu đồ, Bộ đếm & Tính toán, Thống kê 1 chiều & 2 chiều, Danh sách Đầu việc, Cập nhật Hoạt động.
 - Tuỳ chỉnh được thanh điều khiển lọc dữ liệu tiện dụng.
 
-#### **<Tooltip tip="Filters">Bộ Lọc</Tooltip>**
+#### **Bộ Lọc**
 
 - UQL cho phép tìm lọc & tổng hợp mọi dữ liệu Đầu việc, mọi trường thông tin người dùng tự tạo ra:
 - **Thanh lọc nhanh:** tìm & tinh lọc nhanh dữ liệu đang hiện trên Giao diện làm việc.
 - **Bộ lọc lưu sẵn:** lọc theo đúng tiêu chí - nhu cầu công việc cố định, dùng lại hàng ngày, chia sẻ với người liên quan. Có thể gửi cảnh báo tự động về danh sách Đầu việc theo tiêu chí.
 
-### **<Tooltip tip="Permission & Notification Scheme">Phương Án Phân Quyền & Thông Báo</Tooltip>**
+### **Phương Án Phân Quyền & Thông Báo**
 
 Định nghĩa chi tiết với hơn 20 hành động, ai có quyền thực hiện hành động và ai nhận được thông báo. Có sẵn 4 mức Phương án hệ thống tạo sẵn dùng được luôn cho phần lớn trường hợp. Người dùng có thể tự tạo & tinh chỉnh Phương án riêng theo nhu cầu. Chọn Phương án đã tạo ở Toàn cục để gán vào sử dụng cho Chức năng, và có thể mở rộng thêm bằng các cài đặt riêng ở cấp Chức năng.
 
-### **<Tooltip tip="Role">Vai Trò</Tooltip>**
+### **Vai Trò**
 
 Vai trò là cầu nối giữa Phương án Phân quyền & Thông báo của một Chức năng và các Người dùng cụ thể trong các Mảng việc được tạo ra từ Chức năng đó. 2 loại Vai trò:
 
 - **Vai trò Toàn cục:** tự động áp dụng cho tất cả Chức năng.
 - **Vai trò Chức năng:** được tạo riêng cho từng Chức năng cụ thể.
 
-### **<Tooltip tip="Item Access">Truy Cập Tiện Ích</Tooltip>**
+### **Truy Cập Tiện Ích**
 
 Quản lý quyền truy cập và chỉnh sửa Chức năng này thông qua cơ chế Truy cập Tiện ích. 3 mức: Thành viên, Quản lý, Quản trị.
 
-### **<Tooltip tip="Actions with Function">Sử Dụng Chức Năng</Tooltip>**
+### **Sử Dụng Chức Năng**
 
 Chức năng sau khi đã được thiết kế xong có thể đưa vào sử dụng:
 
@@ -95,11 +95,11 @@ Chức năng sau khi đã được thiết kế xong có thể đưa vào sử d
 - Export Chức năng thành file và Import file đó vào Doanh nghiệp khác.
 - hoặc tạo Chức năng mới từ thư viện mẫu có sẵn.
 
-## **<Tooltip tip="UNIVERSAL OBJECT & OBJECT TYPE">ĐỐI TƯỢNG PHỔ QUÁT & LOẠI VIỆC</Tooltip>**
+## **ĐỐI TƯỢNG PHỔ QUÁT & LOẠI VIỆC**
 
 Đối tượng Phổ quát là đơn vị dữ liệu và tính năng nền tảng trong nền tảng Nocode của Luklak. Tất cả kỹ thuật dữ liệu phức tạp đã được đóng gói bên dưới để tạo ra một đơn vị trừu tượng hoá, cho phép người dùng tự kéo thả và định nghĩa nghiệp vụ mà không cần viết code.
 
-### **<Tooltip tip="From Abstract to Action">Từ Trừu Tượng Tới Cụ Thể</Tooltip>**
+### **Từ Trừu Tượng Tới Cụ Thể**
 
 - Đối tượng Phổ quát là khái niệm trừu tượng hoá cốt lõi của nền tảng Luklak Nocode & Lowcode, dùng để tạo nên mọi loại công việc, nghiệp vụ theo nhu cầu.
 - Loại việc trong Chức năng được tạo ra từ Đối tượng Phổ quát, tương ứng với một kiểu nghiệp vụ nhất định của Chức năng đó.
@@ -114,21 +114,21 @@ Chức năng sau khi đã được thiết kế xong có thể đưa vào sử d
 - Loại việc "Ticket" trong Chức năng Customer Support.
 - ... bất kỳ loại nghiệp vụ công việc gì bạn tưởng tượng ra đều có thể được tạo nên từ Đối tượng Phổ quát.
 
-### **<Tooltip tip="Object Attributes">Thuộc Tính Của Đối Tượng Phổ Quát & Loại Việc</Tooltip>**
+### **Thuộc Tính Của Đối Tượng Phổ Quát & Loại Việc**
 
-#### **<Tooltip tip="Two Core Components">Hai Yếu Tố Cấu Thành</Tooltip>**
+#### **Hai Yếu Tố Cấu Thành**
 
 Loại việc được cấu tạo nên từ 2 thành tố:
 
 - **Luồng tiến trình:** bao gồm các Trạng thái và Bước chuyển giữa các trạng thái đó, thể hiện trực quan luồng quy trình của Loại việc đó diễn ra như nào.
 - **Trường dữ liệu & Màn hình:** các Trường dữ liệu do người dùng tự tạo ra để đáp ứng nhu cầu lưu trữ thông tin của Loại việc đó. Các Trường dữ liệu được được sắp xếp hiển thị trong một Màn hình để gán cho một Loại việc.
 
-#### **<Tooltip tip="Two Levels of Object Types">Hai Cấp Độ Của Loại Việc</Tooltip>**
+#### **Hai Cấp Độ Của Loại Việc**
 
 - **Loại việc tiêu chuẩn:** đây cấp độ chính của Loại việc, luôn cần có cấp độ này.
 - **Loại việc con:** được tạo sau và nằm dưới Loại việc tiêu chuẩn trong trường hợp cần dùng, dùng để chia các Loại việc lớn thành các Loại việc nhỏ hơn bên dưới.
 
-#### **<Tooltip tip="Object Connections">Kết Nối Đầu Việc</Tooltip>**
+#### **Kết Nối Đầu Việc**
 
 Các Loại việc và Đầu việc có thể kết nối với nhau tạo nên quy trình nghiệp vụ sâu rộng hơn hoặc tạo sự liên quan giữa các Đầu việc với nhau để có cái nhìn tổng thể. Có 3 cách tạo ra sự kết nối:
 
@@ -136,7 +136,7 @@ Các Loại việc và Đầu việc có thể kết nối với nhau tạo nên
 - **Trường Đầu việc**: là một loại Trường dữ liệu cài đặt cho Loại việc ở trong Chức năng, cho phép đứng ở một Đầu việc này có thể chọn và lưu giá trị là một hoặc nhiều Đầu việc khác theo tiêu chí lọc đã cài đặt trước.
 - **Loại việc Cha - con**: là một Loại kết nối đặc biệt được định nghĩa trước bởi hệ thống, dành riêng cho mối quan hệ giữa Đối tượng tiêu chuẩn và Đối tượng con nằm dưới nó.
 
-### **<Tooltip tip="Unified & Universal Platform">Hệ Thống Hợp Nhất & Phổ Quát</Tooltip>**
+### **Hệ Thống Hợp Nhất & Phổ Quát**
 
 Mọi chức năng nghiệp vụ, dữ liệu công việc trên Luklak đều được tạo nên từ Đối tượng Phổ quát chứ không phải dạng hardcode với SQL Database như các phần mềm đóng gói tính năng khác. Đó là cơ sở cốt lõi để tạo nên hệ thống Luklak Hợp nhất & Phổ quát thông suốt vận hành mọi nghiệp vụ trên một hệ thống tự nhiên, duy nhất:
 
@@ -156,9 +156,9 @@ Mọi chức năng nghiệp vụ, dữ liệu công việc trên Luklak đều �
 - Trạng thái của Đầu việc có thể được sử dụng để truy vấn UQL, lọc dữ liệu, báo cáo, và tích hợp với Tự động hoá nếu cần.
 - Các Trạng thái tự tạo được quản lý ở Admin Toàn cục, một Trạng thái có thể dùng chung cho nhiều Chức năng, Loại việc.
 
-### **<Tooltip tip="Workflow & Statuses">Luồng Tiến Trình & Trạng Thái</Tooltip>**
+### **Luồng Tiến Trình & Trạng Thái**
 
-#### **<Tooltip tip="Workflow Components">Thành Phần Luồng Tiến Trình</Tooltip>**
+#### **Thành Phần Luồng Tiến Trình**
 
 Luồng tiến trình bao gồm 2 yếu tố:
 
@@ -167,47 +167,47 @@ Luồng tiến trình bao gồm 2 yếu tố:
 
 Kết hợp Trạng thái và Bước chuyển tạo thành Luồng tiến trình trực quan, chặt chẽ.
 
-#### **<Tooltip tip="Status Categories">Loại Trạng Thái</Tooltip>**
+#### **Loại Trạng Thái**
 
 - Các Trạng thái do người dùng tạo ra tự do và đều phải thuộc về một trong sáu Loại trạng thái cố định của hệ thống: Mở, Kế hoạch, Đang làm, Hoàn thành, Tạm dừng, Đóng hủy.
 - Trạng thái tạo ra sẽ có màu của Loại trạng thái, giúp người dùng nhanh chóng nhận diện tính chất một cách trực quan.
 - Có thể truy vấn tìm kiếm, tạo bộ lọc, báo cáo dựa trên Loại trạng thái cố định và biết trước này.
 
-#### **<Tooltip tip="Workflow Guide">Hướng Dẫn Tiến Trình</Tooltip>**
+#### **Hướng Dẫn Tiến Trình**
 
 - Khi thiết kế Luồng tiến trình trong chức năng thì có thể viết hướng dẫn làm việc cụ thể đến từng Trạng thái.
 - Khi nhân sự làm việc ở trên Đầu việc cụ thể sẽ dễ dàng xem được hướng dẫn đó, cả trên máy tính và điện thoại.
 
-### **<Tooltip tip="Advanced Settings">Cài Đặt Nâng Cao</Tooltip>**
+### **Cài Đặt Nâng Cao**
 
 Có thể cài đặt nâng cao với mỗi Trạng thái:
 
-#### **<Tooltip tip="Permissions">Phân Quyền</Tooltip>**
+#### **Phân Quyền**
 
 - Chỉ những người nhất định mới được chuyển sang Trạng thái này.
 - Cấp quyền qua: Tài khoản Người dùng, Nhóm, Trường Người dùng, Trường Nhóm, Vai trò, Thành phần mảng việc.
 
-#### **<Tooltip tip="Conditions">Điều Kiện</Tooltip>**
+#### **Điều Kiện**
 
 - Kiểm tra Đầu việc đáp ứng đúng điều kiện dữ liệu thì mới cho chuyển.
 - Điều kiện áp dụng với: Trường dữ liệu, Mục kiểm, Việc con, Việc kết nối.
 
 **Màn hình nhập liệu:** hiện lên với các Trường cần cập nhật, có thể cấu hình được.
 
-#### **<Tooltip tip="Automation">Tự Động Hóa</Tooltip>**
+#### **Tự Động Hóa**
 
 - Khi chuyển sang Trạng thái đó thì thực hiện các hành động tự động hóa bao gồm: cập nhật Trường dữ liệu, thêm Kết nối việc, tạo Đầu việc, gửi email, nhắn tin chat...
 - Đây là Quy tắc tự động trên tiến trình, trong tương quan với Quy tắc chạy ngầm, Quy tắc trong menu hành động của Tự động hoá.
 
 ### **Cách Dùng Nâng Cao**
 
-#### **<Tooltip tip="Query & Reporting">Truy Vấn & Báo Cáo</Tooltip>**
+#### **Truy Vấn & Báo Cáo**
 
 - **Hiện tại:** Mọi Trạng thái, Loại trạng thái hiện tại của Đầu việc đều truy vấn, lọc & làm báo cáo xuyên Chức năng, Mảng việc.
 - **Lịch sử:** truy vấn ra lịch sử trước đó Đầu việc đã từng ở và chuyển Trạng thái như nào. Toán tử lọc: Was in, Was not in, Changed from, Not changed from.
 - **Ví dụ ứng dụng:** làm báo cáo tỉ lệ chuyển đổi giữa các khâu trong luồng bán hàng, ví dụ từ Trạng thái TƯ VẤN SƠ sang ĐẶT LỊCH HẸN được bao nhiêu %.
 
-#### **<Tooltip tip="Actor/ Acting Account">Tài Khoản Thực Thi</Tooltip>**
+#### **Tài Khoản Thực Thi**
 
 Mỗi quy tắc tự động sẽ cần chỉ định Tài khoản thực thi đứng ra truy vấn dữ liệu và thực hiện hành động. Có thể dùng 2 loại:
 
@@ -216,7 +216,7 @@ Mỗi quy tắc tự động sẽ cần chỉ định Tài khoản thực thi đ
 
 **Kích hoạt quy tắc tự động khác:** hành động tự động hoá ở Quy tắc này có được dùng làm sự kiện kích hoạt Quy tắc tự động khác không.
 
-## **<Tooltip tip="DATA FIELD & SCREEN">TRƯỜNG DỮ LIỆU & MÀN HÌNH</Tooltip>**
+## **TRƯỜNG DỮ LIỆU & MÀN HÌNH**
 
 ### **Tổng Quan**
 
@@ -225,19 +225,19 @@ Mỗi quy tắc tự động sẽ cần chỉ định Tài khoản thực thi đ
 - Các Trường này và giá trị lưu ở Đầu việc có thể được sử dụng cho UQL, Bộ lọc, Báo cáo... và Tự động hoá.
 - Trường tự tạo được quản lý ở Admin Toàn cục, một Trường có thể dùng chung cho nhiều Chức năng, Loại việc.
 
-### **<Tooltip tip="Field Types">Các Loại Trường</Tooltip>**
+### **Các Loại Trường**
 
-#### **<Tooltip tip="Basic Field Types">Loại Trường Cơ Bản</Tooltip>**
+#### **Loại Trường Cơ Bản**
 
 Số nguyên, Số thập phân, Ngày, Ngày giờ, Số điện thoại, Email đơn, Email nhiều, Dòng chữ, Đoạn văn bản, Hộp kiểm đơn, Hộp kiểm nhiều, Sổ xuống chọn một, Sổ xuống chọn nhiều
 
-#### **<Tooltip tip="Advanced Field Types">Loại Trường Nâng Cao</Tooltip>**
+#### **Loại Trường Nâng Cao**
 
 - **Người đơn, Người nhiều, Nhóm đơn, Nhóm nhiều:** ngoài việc chọn và lưu giá trị là các Tài khoản người dùng và Nhóm như các Trường bình thường thì các Trường này có được dùng để cài đặt trong Phương án Phân quyền & Thông báo.
 - **Đầu việc đơn, Đầu việc nhiều:** chọn lưu các Đầu việc có liên quan, có thể cấu hình lọc UQL để chỉ hiện & chọn được các Đầu việc theo tiêu chí nhất định.
 - **Công thức:** tính toán dựa trên các Trường dạng số và trả lưu kết quả trên cùng Đầu việc.
 
-#### **<Tooltip tip="Data table field">Trường Bảng dữ liệu</Tooltip>**
+#### **Trường Bảng dữ liệu**
 
 Đây là trường đặc biệt với tính năng và khả năng ứng dụng rất sâu rộng nên được tách ra thành một phần riêng để mô tả ở đây.
 
@@ -250,7 +250,7 @@ Trường Bảng dữ liệu này, kết hợp với các Hành động tự đ�
 - **Kho hàng & Đơn hàng**: Các Đầu việc ở Chức năng Kho hàng sẽ lưu trữ thông tin về các mặt hàng đang có trong kho. Khi bộ phận Kinh doanh lập một Đầu việc dạng Đơn hàng thì sẽ gọi các dữ liệu mặt hàng ở Đầu việc của Kho hàng ra và điền vào bảng dữ liệu. Mỗi Mặt hàng được đưa vào đơn hàng với số lượng X thì sẽ chạy Tự động hoá trừ giảm X tương ứng ở Trường dữ liệu Số lượng tồn kho ở Đầu việc Mặt hàng.
 - **Lớp học & Học viên**: Chức năng Học viên sẽ có các Đầu việc lưu trữ dữ liệu liên quan tới các Học viên, khi tạo một Đầu việc Lớp học thì sẽ gọi các dữ liệu ở Đầu việc Học viên ra và điền vào bảng dữ liệu
 
-#### **<Tooltip tip="Field Configuration">Cài Đặt Trường</Tooltip>**
+#### **Cài Đặt Trường**
 
 Mỗi loại trường đều có cấu hình riêng ví dụ như:
 
@@ -259,14 +259,14 @@ Mỗi loại trường đều có cấu hình riêng ví dụ như:
 - Xác thực dữ liệu nhập vào
 - Tên trường đa ngôn ngữ
 
-### **<Tooltip tip="Data Screen in Function">Màn Hình Trong Chức Năng</Tooltip>**
+### **Màn Hình Trong Chức Năng**
 
-#### **<Tooltip tip="Data screen for Object type">Màn hình dữ liệu cho Loại việc</Tooltip>**
+#### **Màn hình dữ liệu cho Loại việc**
 
 - Mỗi Loại việc trong Chức năng cần đi kèm với một Màn hình Dữ liệu (và Luồng tiến trình). Các Loại việc khác nhau trong một Chức năng có thể dùng chung một Màn hình.
 - Màn hình sẽ bao gồm các Trường dữ liệu dùng cho Loại việc, và sẽ hiện lên ở Đầu việc ở Mảng việc.
 
-#### **<Tooltip tip="System-defined fields with Required toggle">Trường dữ liệu mặc định với tuỳ chọn Bắt buộc</Tooltip>**
+#### **Trường dữ liệu mặc định với tuỳ chọn Bắt buộc**
 
 - Trong Màn hình có các trường dữ liệu được hệ thống định nghĩa sẵn luôn hiển thị, và có thể bật tắt tuỳ chọn `Bắt buộc`
 - Ngày làm, Ngày kết thúc, Ngày nhắc việc
@@ -276,7 +276,7 @@ Mỗi loại trường đều có cấu hình riêng ví dụ như:
 - Thành phần Mảng việc
 - Các trường về Người và Nhóm ở trên thường được sử dụng để cài đặt sẵn vào các Phương án Phân quyền & Thông báo.
 
-#### **<Tooltip tip="System-defined fields with Visibility toggle">Trường dữ liệu mặc định với tuỳ chọn Hiển thị</Tooltip>**
+#### **Trường dữ liệu mặc định với tuỳ chọn Hiển thị**
 
 - Trong Màn hình có các trường dữ liệu được hệ thống định nghĩa sẵn và có tuỳ chọn có hiển thị và dùng hay không.
 - Mô tả: dạng đoạn văn bản, được hiển thị nội bật ở Đầu việc
@@ -286,13 +286,13 @@ Mỗi loại trường đều có cấu hình riêng ví dụ như:
 - Tệp đính kèm: đính kèm các tệp vào Đầu việc
 - Live photo: chụp ảnh sống trên mobile app, trên ảnh sẽ tự động in thông tin về thời gian, toạ độ - địa chỉ, tài khoản người dùng... thường được dùng cho việc kiểm tra, xác nhận, báo cáo
 
-### **<Tooltip tip="Field Data on Objects & Usage">Dữ Liệu Của Trường Trên Đầu Việc & Sử Dụng</Tooltip>**
+### **Dữ Liệu Của Trường Trên Đầu Việc & Sử Dụng**
 
-#### **<Tooltip tip="Working with Objects">Đầu Việc & Làm Việc</Tooltip>**
+#### **Đầu Việc & Làm Việc**
 
 Khi tạo và làm việc với Đầu việc ở Mảng việc (tạo từ Chức năng) thì người dùng sẽ cập nhật, lưu trữ và truy cập các Dữ liệu trên các Đầu việc này.
 
-#### **<Tooltip tip="Filters, Queries & Dashboards">Tìm Lọc, Truy Vấn & Báo Cáo</Tooltip>**
+#### **Tìm Lọc, Truy Vấn & Báo Cáo**
 
 Universal Query Language (UQL) cho phép truy vấn mọi Trường dữ liệu do người dùng tạo ra (và cả các dữ liệu hệ thống). Đó là cơ sở cho các tính năng sau:
 
@@ -300,7 +300,7 @@ Universal Query Language (UQL) cho phép truy vấn mọi Trường dữ liệu 
 - **Bộ lọc lưu sẵn:** lưu sẵn các tiêu chí để lọc ra các dữ liệu Đầu việc theo những đặc điểm nhất định, dùng lại hàng ngày tiện lợi, dễ dàng chia sẻ với người khác.
 - **Báo cáo phổ quát:** truy vấn và tổng hợp dữ liệu Đầu việc từ nhiều Chức năng, Mảng việc khác nhau để tạo thành báo cáo trực quan, thông suốt.
 
-#### **<Tooltip tip="Automation">Tự Động Hoá</Tooltip>**
+#### **Tự Động Hoá**
 
 Các Trường dữ liệu này cũng được sử dụng sâu rộng trong Tự động hoá:
 
@@ -308,16 +308,16 @@ Các Trường dữ liệu này cũng được sử dụng sâu rộng trong T�
 - Hành động tự động cập nhật Trường dữ liệu.
 - Lấy dữ liệu động (smart value) từ các Đầu việc trên hệ thống để xử lý tính toán.
 
-### **<Tooltip tip="Auto Fields">Trường Tự Động</Tooltip>**
+### **Trường Tự Động**
 
 Dưới đây là các trường mà hệ thống định nghĩa sẵn và tự động cập nhật giá trị, không ai có thể thay đổi được.
 
-#### **<Tooltip tip="Object key">Mã đầu việc</Tooltip>**
+#### **Mã đầu việc**
 
 - Khi một Đầu việc được tạo ra trong một Mảng việc, hệ thống sự tự động sinh ra giá trị Mã Đầu việc cho nó theo cấu trúc: “MÃ MẢNG VIỆC \+ Số nhảy”, Ví dụ “CRM-1234”. Đây là mã định danh duy nhất trên toàn hệ thống.
 - Giá trị Mã Đầu việc được lưu trên Đầu việc tương tự các Trường dữ liệu khác và có thể truy vấn tìm kiếm, lấy giá trị thông tin nhưng không ai có thể thay đổi được giá trị này.
 
-#### **<Tooltip tip="Auto Fields on Each Object">Trường Tự Động Trên Đầu Việc</Tooltip>**
+#### **Trường Tự Động Trên Đầu Việc**
 
 Với mỗi Đầu việc luôn có các trường sau được hệ thống tự động cập nhật giá trị, và Người dùng có thể truy vấn, tìm lọc và làm báo cáo:
 
@@ -328,7 +328,7 @@ Với mỗi Đầu việc luôn có các trường sau được hệ thống t�
 - **interacted:** ngày giờ cuối cùng của 4 trường ở trên.
 - **creator:** người tạo.
 
-### **<Tooltip tip="Global Management">Quản Trị Ở Toàn Cục</Tooltip>**
+### **Quản Trị Ở Toàn Cục**
 
 Các giá trị có tính chất Toàn cục như Trường dữ liệu, Trạng thái, Loại việc có chung tính chất:
 
@@ -336,7 +336,7 @@ Các giá trị có tính chất Toàn cục như Trường dữ liệu, Trạng
 - Đưa vào dùng chung ở các Chức năng/ Loại việc.
 - Có thể truy vấn, tổng hợp, làm báo cáo xuyên suốt mọi Đầu việc thuộc các Mảng việc, Chức năng khác nhau.
 
-## **<Tooltip tip="AUTOMATION">TỰ ĐỘNG HOÁ</Tooltip>**
+## **TỰ ĐỘNG HOÁ**
 
 ### **Tổng Quan**
 
@@ -344,11 +344,11 @@ Các giá trị có tính chất Toàn cục như Trường dữ liệu, Trạng
 - Nguyên tắc: Trigger - Condition - Action. Câu mô tả gần gũi hơn: Nếu sự kiện A diễn ra - Kiểm tra thêm điều kiện B - Thực hiện hành động C.
 - Vị trí: tạo ở Chức năng, Luồng tiến trình, Mảng việc, Khu vực, Thư mục Toàn cục với phạm vi tác động tương ứng.
 
-### **<Tooltip tip="Triggers & Automation Rule Types">Cách Kích Hoạt & Các Loại Quy Tắc Tự Động</Tooltip>**
+### **Cách Kích Hoạt & Các Loại Quy Tắc Tự Động**
 
 Có bốn cách kích hoạt chạy Quy tắc tự động, tương ứng với bốn loại Quy tắc như dưới đây:
 
-#### **<Tooltip tip="Silent (trigger & rule)">Chạy Ngầm (kích hoạt & quy tắc)</Tooltip>**
+#### **Chạy Ngầm (kích hoạt & quy tắc)**
 
 Lắng nghe sự kiện, kiểm tra điều kiện và tự động thực thi hành động nếu phù hợp mà không cần sự tương tác của người dùng:
 
@@ -356,21 +356,21 @@ Lắng nghe sự kiện, kiểm tra điều kiện và tự động thực thi h
 - **Lịch trình:** đặt lịch chạy theo giờ, ngày, tháng.
 - **Webhook:** nhận thông tin từ app bên ngoài gửi vào.
 
-#### **<Tooltip tip="Workflow (trigger & rule)">Luồng Tiến Trình (kích hoạt & quy tắc)</Tooltip>**
+#### **Luồng Tiến Trình (kích hoạt & quy tắc)**
 
 - Cài trên các Trạng thái của Luồng tiến trình trong Chức năng.
 - Chạy khi chuyển người dùng chuyển tới Trạng thái đó.
 
-#### **<Tooltip tip="Object Action (trigger & rule)">Hành Động Trên Đầu Việc (kích hoạt & quy tắc)</Tooltip>**
+#### **Hành Động Trên Đầu Việc (kích hoạt & quy tắc)**
 
 - Tạo menu hành động ở Đầu việc để Người dùng chủ động chọn ở Thanh công cụ của Đầu việc.
 - Có thể cài đặt để một Hành động này chỉ hiện với các Loại việc, Trạng thái, Tài khoản Người dùng, Nhóm nhất định.
 
-#### **<Tooltip tip="Standalone Actions (coming soon)">Hành Động Độc Lập (sắp làm)</Tooltip>**
+#### **Hành Động Độc Lập (sắp làm)**
 
 Tạo menu hành động ở Mảng việc, Khu vực, Chức năng... mà không gắn với Đầu việc.
 
-### **<Tooltip tip="Filter conditions & execution flows">Điều kiện lọc & luồng chạy</Tooltip>**
+### **Điều kiện lọc & luồng chạy**
 
 Ngoài việc dùng UQL để lọc & kiểm tra tiêu chí xem có chạy Hành động không thì còn có các luồng chạy đa đạng như dưới đây.
 
@@ -378,7 +378,7 @@ Ngoài việc dùng UQL để lọc & kiểm tra tiêu chí xem có chạy Hành
 - **Multi path**: Tạo nhiều nhánh xử lý song song theo các điều kiện khác nhau
 - **Loop**: chạy liên tục với nhiều Đầu việc khác nhau và xử lý lần lượt với từng Đầu việc đó
 
-### **<Tooltip tip="Action">Hành Động</Tooltip>**
+### **Hành Động**
 
 Sau khi đáp ứng các điều kiện thì sẽ tự động thực hiện các hành động kiểu như dưới đây:
 
@@ -388,7 +388,7 @@ Sau khi đáp ứng các điều kiện thì sẽ tự động thực hiện cá
 - **Gửi ra ngoài:** Zalo ZNS, Email.
 - **Tích hợp:** gửi Http Request sang app khác.
 
-### **<Tooltip tip="Dynamic data processing">Xử lí dữ liệu động</Tooltip>**
+### **Xử lí dữ liệu động**
 
 Tự động hoá cho lấy dữ liệu động từ các tham số của Đầu việc khác nhau xử lý, tính toán, biến đổi dữ liệu mạnh mẽ
 
@@ -396,7 +396,7 @@ Tự động hoá cho lấy dữ liệu động từ các tham số của Đầu
 - **Velocity** cũng có thể được dùng ngay trong Automation của Luklak để xử lý các yêu cầu nâng cao.
 - **Javascript**/ Python qua N8n: khi kết nối qua N8n thì ở trong N8n có thể viết code bằng Javascript/ Python để xử lý các vấn sâu về kĩ thuật, sau đó trả về Luklak hoặc gửi đi tới các app ngoài.
 
-### **<Tooltip tip="External app integrations">Kết nối tích hợp app ngoài</Tooltip>**
+### **Kết nối tích hợp app ngoài**
 
 Ngoài việc tự động hoá công việc xuyên chức năng trong Luklak thì Luklak có thể kết nối tích hợp với nhiều app khác để trở thành một trung tâm vận hành hợp nhất
 
@@ -407,7 +407,7 @@ Tự động hoá của Luklak mở sẵn 2 chiều gửi/ nhận dữ liệu s�
 - **Nhận Webhook** nhận webhook từ App bên ngoài bắn vào để kích hoạt Quy tắc tự động cũng như lấy dữ liệu đẩy vào Luklak
 - **Gửi Http Request** sang app ngoài để đẩy dữ liệu từ Luklak qua
 
-#### **<Tooltip tip="Omnichannel Communication">Giao Tiếp Đa Kênh</Tooltip>**
+#### **Giao Tiếp Đa Kênh**
 
 Tự động hoá có sẵn tích hợp giao tiếp qua các kênh để tương tác với người bên ngoài hệ thống (ví dụ: khách hàng, đối tác…)
 
@@ -415,13 +415,13 @@ Tự động hoá có sẵn tích hợp giao tiếp qua các kênh để tương
 - Zalo ZNS: gửi thông báo tới số điện thoại Zalo qua dịch vụ của Zalo
 - Tổng đài VOIP và phân tích cuộc gọi bằng AI: tạo cuộc gọi thoại tới số điện thoại lưu trên Đầu việc. Tổng đài sẽ tự động trả về dữ liệu cuộc gọi lưu vào Đầu việc tương ứng, từ đó có thể làm báo cáo cuộc gọi. Nếu ứng dụng thêm tính năng AI thì có tổng đài có thể chuyển speach-to-text trả về văn bản nội dung cuộc gọi, từ đó có thể tóm tắt, phân tích nội dung cuộc gọi với các Prompt AI.
 
-#### **<Tooltip tip="Bank Transaction Updates via Sepay Integration">Cập nhật biến động số dư tài khoản ngân hàng qua Sepay</Tooltip>**
+#### **Cập nhật biến động số dư tài khoản ngân hàng qua Sepay**
 
 - Sepay là dịch vụ trung gian kết nối với các ngân hàng, khi có giao dịch biến động số dư trong tài khoản ngân hàng thì Sepay sẽ bắn webhook về làm Trigger cho Automation trong Luklak nhận để xử lý dữ liệu, cập nhật vào hệ thống.
 - Có thể thiết kế các Quy tắc tự động, ví dụ như Hành động trên Đầu việc, để tạo đường link và mã QR thanh toán chuyển khoản của Sepay, bên trong có nội dung về Tài khoản ngân hàng nhận, số tiền thanh toán và nên bổ sung một mã định danh nào đó (qua Mã đầu việc, Email, Điện thoại...) để xác định đó là khách hàng nào, thanh toán cho khoản nào và gửi cho khách để thanh toán.
 - Khi Luklak Automation nhận được webhook nội dung biến động số dư từ Sepay thì sẽ trích xuất được Mã định danh và tìm đúng Đầu việc tương ứng để cập nhật khoản tiền đã nhận.
 
-#### **<Tooltip tip="n8n as Integration Hub">N8n trung gian kết nối</Tooltip>**
+#### **N8n trung gian kết nối**
 
 - N8n là cổng trung gian kết nối bên ngoài, có sẵn xác thực đăng nhập và các hành động tiêu chuẩn tương tác với các app phổ biến của thế giới, cộng với khả năng Lowcode viết Javascript/ Python để xử lý các yêu cầu nâng cao
 - Thông qua Webhook/ Http request thì Luklak có thể kết nối 2 chiều với N8n, qua đó kết nối với gần như tất cả các phần mềm phổ biến trên thế giới cũng như khả năng tích hợp với các phần mềm đặc thù của Việt nam.
@@ -443,37 +443,37 @@ Tự động hoá có sẵn tích hợp giao tiếp qua các kênh để tương
 - Các hành thao tác tự động hoá đã được thiết kế sâu rộng ngay từ đầu cho Universal Object và mọi dữ liệu chức năng được tạo ra đều được thừa hưởng toàn bộ hệ thống rất mạnh này.
 - Kết hợp khả năng Lowcode tự thân trong Luklak và kết nối với N8n để code thêm Javascript/ Python để xử lý các yêu cầu phức tạp.
 
-### **<Tooltip tip="Execution & Security">Thực Thi & Bảo Mật</Tooltip>**
+### **Thực Thi & Bảo Mật**
 
-#### **<Tooltip tip="Acting Account">Tài Khoản Thực Thi</Tooltip>**
+#### **Tài Khoản Thực Thi**
 
 Các quy tắc tự động phải được thực hiện thông qua một Tài khoản nhất định, có 2 loại tài khoản:
 
 - **Tài khoản Người dùng:** dùng chính tài khoản của Người cài đặt quy tắc, thường không dùng cho các nghiệp vụ liên quan tới người khác vì mỗi người dùng có phân quyền khác nhau.
 - **Tài khoản Chức năng:** là tài khoản mang tính kĩ thuật dùng để thực thi Tự động hoá với phân quyền bảo mật. Tài khoản này không có mật khẩu và cũng không thể dùng để đăng nhập hay làm việc được.
 
-#### **<Tooltip tip="Triggering Other Rules">Kích Hoạt Quy Tắc Khác</Tooltip>**
+#### **Kích Hoạt Quy Tắc Khác**
 
 Các hành động tự động trong một Quy tắc sẽ tạo ra các Sự kiện Cập nhật, và Sự kiện đó có thể được dùng làm Trigger để kích hoạt Quy tắc khác, hoặc không, dựa trên tuỳ chọn:
 
 - **Bật:** cho dùng để kích Quy tắc khác, sẽ tạo nên một chuỗi tự động hoá kết nối với nhau.
 - **Tắt:** thường dùng khi muốn tránh vòng lặp vô tận (loop) kích hoạt các quy tắc tự động.
 
-#### **<Tooltip tip="Notifications for Automated Actions">Thông Báo Cho Hành Động Tự Động</Tooltip>**
+#### **Thông Báo Cho Hành Động Tự Động**
 
 Các Hành động tự động vẫn tạo ra Sự kiện Cập nhật tương tự hành động do người dùng thực hiện. Tuy nhiên vẫn có tuỳ chọn Bật/ Tắt việc gửi Thông báo về các Cập nhật này:
 
 - **Bật:** gửi thông báo như bình thường, nắm được mọi hành động diễn ra.
 - **Tắt:** không thông báo cập nhật, thường dùng với các hành động quá nhiều dễ gây lụt thông báo.
 
-#### **Activity Log / Lịch Sử Chạy**
+#### **<Tooltip tip="Activity Log">Lịch Sử Chạy</Tooltip>**
 
 Các Quy tắc tự động đều có lịch sử chạy để:
 
 - Thống kê số lượng chạy tự động.
 - Rà soát truy vết khi có vấn đề.
 
-## **<Tooltip tip="WORKVIEW, DASHBOARD, FILTER, UQL ">GIAO DIỆN LÀM VIỆC, BÁO CÁO, BỘ LỌC, UQL</Tooltip>**
+## **GIAO DIỆN LÀM VIỆC, BÁO CÁO, BỘ LỌC, UQL**
 
 ### **Tổng Quan**
 
@@ -481,7 +481,7 @@ Các Quy tắc tự động đều có lịch sử chạy để:
 - **Nơi tạo & dùng:** Giao diện được tạo ở Chức năng thì sẽ dùng được ở mọi Mảng việc tạo ra từ Chức năng đó, ngoài ra có thể tạo riêng cho từng Mảng việc.
 - **Hợp nhất & phổ quát:** Mọi Chức năng nghiệp vụ, dữ liệu công việc khác nhau đều được tạo ra từ Đối tượng Phổ quát, đi kèm với Ngôn ngữ Truy vấn Phổ quát (UQL) từ đó tạo ra các tính năng lọc và tạo Báo cáo tổng hợp dữ liệu xuyên chức năng theo nhu cầu.
 
-### **<Tooltip tip="Workviews">Giao Diện Làm Việc</Tooltip>**
+### **Giao Diện Làm Việc**
 
 Là các cách trình bày thông tin phổ biến, thường dùng hàng ngày với khả năng tuỳ biến cao theo nhu cầu:
 
@@ -491,13 +491,13 @@ Là các cách trình bày thông tin phổ biến, thường dùng hàng ngày 
 - **Dòng thời gian:** tiến trình theo thời gian.
 - **Cập nhật:** các hoạt động cập nhật Đầu việc.
 
-### **Dashboard / Báo Cáo**
+### **<Tooltip tip="Dashboard">Báo Cáo</Tooltip>**
 
-#### **Dashboards vs. Workviews / Báo Cáo & Giao Diện Làm Việc**
+#### **<Tooltip tip="Dashboards vs. Workviews">Báo Cáo & Giao Diện Làm Việc</Tooltip>**
 
 Nếu các Giao diện làm việc ở bên trên chỉ trình bày các Đầu việc theo các cách trực quan khác nhau để làm việc trực tiếp trên đó thì Báo cáo là tính chất khác, cho phép tổng hợp dữ liệu và xử lý tính toán rồi trình bày sâu hơn theo kiểu phân tích dữ liệu tổng thể.
 
-#### **Data Sources for Dashboard / Dữ Liệu Báo Cáo**
+#### **<Tooltip tip="Data Sources for Dashboard">Dữ Liệu Báo Cáo</Tooltip>**
 
 - Mọi dữ liệu công việc, chức năng khác nhau trên Luklak đều được tạo ra từ Đối tượng Phổ quát nên có thể ngay lập tức đưa vào làm báo cáo mà không phải xử lý các công đoạn ETL (Extract - Transform - Load) phức tạp và tốn kém như các phần mềm đóng gói tính năng rời rạc bên ngoài.
 - Người dùng có thể chọn nguồn dữ liệu từ các Chức năng, Mảng việc khác nhau hoặc đơn giản chỉ là dùng UQL (Universal Query Language) để truy vấn, tinh lọc, tổng hợp và tính toán dữ liệu trên toàn hệ thống, xuyên Chức năng - Mảng việc.
@@ -506,7 +506,7 @@ Nếu các Giao diện làm việc ở bên trên chỉ trình bày các Đầu 
   - Dữ liệu cho từng trang trong Báo cáo.
   - Dữ liệu cho từng Gadget trong trang.
 
-#### **Data visualization gadgets / Các khối trình bày dữ liệu trực quan**
+#### **<Tooltip tip="Data visualization gadgets">Các khối trình bày dữ liệu trực quan</Tooltip>**
 
 Sau khi đã tổng hợp dữ liệu thì sẽ có nhiều khối trình bày trực quan để người dùng dễ nắm bắt và phân tích tình hình công việc.
 
@@ -516,43 +516,43 @@ Sau khi đã tổng hợp dữ liệu thì sẽ có nhiều khối trình bày t
 - **Danh sách Đầu việc**: đưa cả Danh sách các Đầu việc quan trọng vào Báo cáo, bên cạnh các dữ liệu tổng hợp, để có thể nắm bắt và xử lý nhanh công việc.
 - **Cập nhật Hoạt động**: đưa Cập nhật Hoạt động của luồng dữ liệu nào đó vào Báo cáo, bên cạnh các dữ liệu tổng hợp, để có thể nắm bắt và xử lý nhanh công việc.
 
-#### **Quick Filter / Thanh Lọc Nhanh**
+#### **<Tooltip tip="Quick Filter">Thanh Lọc Nhanh</Tooltip>**
 
 Có thể cài đặt tuỳ biến Thanh lọc nhanh với các Trường dữ liệu, Bộ tiêu chí lọc cài đặt sẵn, để khi người dùng vào Báo cáo có thể tương tác, lọc đào sâu dữ liệu nhanh tiện lợi.
 
-#### **Work Directly from Dashboard / Làm Việc Trực Tiếp Từ Báo Cáo**
+#### **<Tooltip tip="Work Directly from Dashboard">Làm Việc Trực Tiếp Từ Báo Cáo</Tooltip>**
 
 Với tính hợp nhất và phổ quát của Luklak, Báo cáo không còn là một bản trình bày tách rời ở một nơi riêng rẽ để theo dõi hay phân tích dữ liệu, mà nó sống hữu cơ với các Đầu việc đang diễn ra, cho phép Người dùng có thể nhấn vào bất kỳ điểm dữ liệu nào trên Báo cáo để:
 
 - Mở ra Đầu việc cụ thể tương ứng để xem chi tiết và xử lý trực tiếp.
 - Hoặc mở danh sách các Đầu việc liên quan, là nguồn dữ liệu đầu vào tạo nên phần hiển thị trong báo cáo đó.
 
-### **Saved Filters & Quick Filter Bar / Bộ Lọc Lưu Sẵn & Thanh Lọc Nhanh**
+### **<Tooltip tip="Saved Filters & Quick Filter Bar">Bộ Lọc Lưu Sẵn & Thanh Lọc Nhanh</Tooltip>**
 
 #### **Quick Filter Bar / Thanh Lọc Nhanh**
 
 - Là thanh trên cùng màn hình, dùng để tìm & tinh lọc nhanh dữ liệu đang hiện trên Giao diện làm việc, Báo cáo.
 - Hệ thống luôn có Thanh lọc nhanh mặc định này. Người dùng cũng có thể tuỳ chỉnh được các tiêu chí, điều kiện lọc riêng cho phù hợp với mỗi Giao diện làm việc, Báo cáo cụ thể.
 
-#### **Saved Filters / Bộ Lọc Lưu Sẵn**
+#### **<Tooltip tip="Saved Filters">Bộ Lọc Lưu Sẵn</Tooltip>**
 
 - Các tiêu chí lọc được lưu lại, lọc ra các Đầu việc theo một tính chất, tình huống làm việc nhất định. Tiện mở dùng lại & chia sẻ với người khác.
 - Cài đặt tự động bắn thông báo, cảnh báo theo lịch tới những người liên quan.
 
-### **UQL Universal Query Language / UQL Ngôn Ngữ Truy Vấn Phổ Quát**
+### **<Tooltip tip="UQL Universal Query Language">UQL Ngôn Ngữ Truy Vấn Phổ Quát</Tooltip>**
 
-#### **Nature of UQL / Tính Chất Của UQL**
+#### **<Tooltip tip="Nature of UQL">Tính Chất Của UQL</Tooltip>**
 
 - Mọi dữ liệu Đầu việc, nghiệp vụ ở các Chức năng khác nhau do Người dùng tạo tự tạo đều được tạo ra từ Đối tượng Phổ quát, và đi kèm với nó là Ngôn ngữ Truy vấn Phổ quát (UQL - Universal Query Language).
 - UQL cho phép truy vấn, tìm lọc, tổng hợp mọi dữ liệu xuyên chức năng trên toàn bộ hệ thống Luklak.
 - Các dữ loại dữ liệu đưa vào câu lệnh truy vấn: Chức năng, Mảng việc, Loại việc, Trường dữ liệu, Trạng thái trong Luồng tiến trình, Thành phần Mảng việc...
 
-#### **Two Usage Modes / Hai Chế Độ Sử Dụng**
+#### **<Tooltip tip="Two Usage Modes">Hai Chế Độ Sử Dụng</Tooltip>**
 
 - **Giao diện trực quan:** người dùng chỉ cần kéo thả trên giao diện đồ họa trực quan, dễ hiểu là tạo được các câu lệnh lọc. Chính thanh lọc nhanh và phần lớn tính năng lọc tìm dữ liệu được thể hiện ở dạng giao diện trực quan này.
 - **Câu lệnh nâng cao:** cho phép viết trực tiếp câu lệnh UQL dưới dạng code để xử lý các trường hợp phức tạp, nâng cao.
 
-#### **Specific Use Cases / Các Ứng Dụng Cụ Thể**
+#### **<Tooltip tip="Specific Use Cases">Các Ứng Dụng Cụ Thể</Tooltip>**
 
 Mọi tiện ích tính năng mà cần truy vấn, lọc và tổng hợp dữ liệu đều dựa trên UQL này. cụ thể bao gồm:
 
@@ -562,31 +562,31 @@ Mọi tiện ích tính năng mà cần truy vấn, lọc và tổng hợp dữ 
 - Điều kiện lọc và rẽ nhánh trong Tự động hoá.
 - Các tính năng khác cần tìm lọc & tổng hợp dữ liệu.
 
-## **PERMISSION & NOTIFICATION SCHEME / PHƯƠNG ÁN PHÂN QUYỀN & THÔNG BÁO**
+## **<Tooltip tip="PERMISSION & NOTIFICATION SCHEME">PHƯƠNG ÁN PHÂN QUYỀN & THÔNG BÁO</Tooltip>**
 
 Phương án Phân quyền & Phương án Thông báo định nghĩa ai được làm gì và ai sẽ nhận thông báo gì trên từng Đầu việc. Các Phương án này được thiết lập một lần ở cấp toàn cục và được các Chức năng chọn sử dụng, sau đó sẽ tự động áp dụng với các Đầu việc trong Mảng việc được tạo ra từ Chức năng đó.
 
-### **Actions / Hành Động**
+### **<Tooltip tip="Actions">Hành Động</Tooltip>**
 
 - **Mảng việc (chỉ áp dụng phân quyền):** Xem Mảng việc.
 - **Đầu việc:** Xem, Tạo, Xoá, Chỉnh sửa, Kết nối, Gán người & ngày.
 - **Tệp đính kèm trên Đầu việc:** Thêm tệp, Xoá tệp của mình / Xoá tệp của người khác.
 - **Trao đổi trên Đầu việc:** Gửi tin nhắn, Xoá tin của mình / Xoá tin của người khác.
 
-### **Recipients / Người Nhận**
+### **<Tooltip tip="Recipients">Người Nhận</Tooltip>**
 
 - Tài khoản Người dùng & Tài khoản Chức năng.
 - Nhóm tự tạo & Nhóm hệ thống Tất cả thành viên.
 - Trường Người dùng & Trường Nhóm trên Đầu việc.
 - Vai trò đã được gán người dùng hoặc nhóm trong Khu vực và Mảng việc.
 
-## **ROLE / VAI TRÒ**
+## **<Tooltip tip="ROLE">VAI TRÒ</Tooltip>**
 
 - Vai trò thường đại diện cho một tính chất công việc nhất định, được tạo ở cấp Toàn cục và Chức năng.
 - Trong mỗi Phương án Phân quyền & Thông báo, từng Vai trò sẽ được quy định rõ quyền hành động và loại thông báo được nhận.
 - Khi tạo Mảng việc từ Chức năng, người dùng và nhóm sẽ được gán vào các Vai trò cụ thể của Mảng việc, từ đó tự động nhận các phân quyền và thông báo tương ứng đối với các Đầu việc trong Mảng việc đó.
 
-### **Types of Roles / Các Loại Vai Trò**
+### **<Tooltip tip="Types of Roles">Các Loại Vai Trò</Tooltip>**
 
 - **Vai trò Toàn cục:** Tự động áp dụng cho tất cả Chức năng, với 3 vai trò mặc định: Thành Viên, Quản Lý, và Quản Trị. Bạn có thể tạo thêm vai trò khác nếu cần.
 - **Vai trò trong Chức năng:** Được định nghĩa bên trong một Chức năng cụ thể và chỉ sử dụng trong Chức năng đó.klak supports built-in integration with multiple communication channels: Email, Zalo ZNS, call center platforms, and chat channels such as Facebook Messenger, Zalo OA, Whatsapp (coming soon).
@@ -597,7 +597,7 @@ Có sẵn tích hợp giao tiếp qua các kênh: Email, Zalo ZNS, Tổng đài 
 
 Mở sẵn 2 chiều gửi/ nhận dữ liệu sẵn sàng kết nối với bất kì app nào cũng mở cổng kết nối.
 
-#### **N8n as Integration Hub / N8n Trung Gian Kết Nối**
+#### **<Tooltip tip="N8n as Integration Hub">N8n Trung Gian Kết Nối</Tooltip>**
 
 - N8n là cổng trung gian kết nối bên ngoài, có sẵn xác thực đăng nhập và các hành động tiêu chuẩn tương tác với các app phổ biến của thế giới, cộng với khả năng Lowcode viết Javascript/ Python để xử lý các yêu cầu nâng cao.
 - Thông qua Webhook/ Http request thì Luklak có thể kết nối 2 chiều với N8n, qua đó kết nối với gần như tất cả các phần mềm phổ biến trên thế giới cũng như khả năng tích hợp với các phần mềm đặc thù của Việt nam.
