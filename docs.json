@@ -9,27 +9,7 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-     "languages": [
-      {
-        "language": "en",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "pages": ["en/overview", "en/quickstart", "en/development"]
-          }
-        ]
-      },
-      {
-        "language": "vi",
-        "groups": [
-          {
-            "group": "Getting Started",
-            "pages": ["es/overview", "es/quickstart", "es/development"]
-          }
-        ]
-      }
-    ],
-    "tabs": [
+         "tabs": [
       {
         "tab": "Bắt đầu",
         "groups": [
@@ -174,6 +154,7 @@
         }
       ]
     }
+    
   },
   "logo": {
     "light": "/logo/luklaklight.svg",
