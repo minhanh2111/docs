@@ -138,7 +138,7 @@
         "tab": "Khóa học",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Tự động hóa",
             "pages": [
               "courses/khoa-hoc"
             ]
