@@ -20,7 +20,6 @@
             "group": "Tổng quan",
             "pages": [
               "getting-started/index",
-              "development",
               "getting-started/taikhoan-dangki"
             ]
           },
