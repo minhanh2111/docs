@@ -143,9 +143,9 @@
     {
       "dropdown": "English",
       "icon": "square-terminal",
-         "tabs": [
+      "tabs": [
       {
-        "tab": "Bắt đầu thử tab tiếng anh",
+        "tab": "Bắt đầu",
         "groups": [
           {
             "group": "Get Started",
