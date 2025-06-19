@@ -23,7 +23,6 @@
               "getting-started/taikhoan-dangki",
               {
 					"group": "Quick Start",
-                    "tag": "NEW",
 					"icon": "play",
 					"pages": [
 						"navigation",
@@ -34,6 +33,7 @@
           },
           {
             "group": "Quick Demo",
+            "tag": "INTERACTIVE",
             "pages": [
               "function-design/crm",
               "essentials/code",
