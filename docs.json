@@ -18,12 +18,12 @@
         "groups": [
           {
             "group": "Tổng quan",
-            "tag": "NEW",
             "pages": [
               "getting-started/index",
               "getting-started/taikhoan-dangki",
               {
 					"group": "Quick Start",
+                    "tag": "NEW",
 					"icon": "play",
 					"pages": [
 						"navigation",
@@ -119,7 +119,6 @@
       },
       {
         "tab": "Khóa học",
-        "tag": "NEW",
         "groups": [
           {
             "group": "Tự động hóa",
