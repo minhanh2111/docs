@@ -17,14 +17,14 @@
         "tab": "Bắt đầu",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Tổng quan",
             "pages": [
               "getting-started/index",
               "development"
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Quick Demo",
             "pages": [
               "function-design/crm",
               "essentials/code",
@@ -47,7 +47,25 @@
             ]
           },
           {
-            "group": "Thiết kế Chức năng",
+            "group": "Toàn cục & các miếng lego",
+            "pages": [
+              "function-design/functiondesign-en",
+              "function-design/functiondesign-vn",
+              "function-design/quanlythuchi",
+              "luklak-platform/endpoint/webhook"
+            ]
+          },
+          {
+            "group": "Thiết kế chức năng",
+            "pages": [
+              "function-design/functiondesign-en",
+              "function-design/functiondesign-vn",
+              "function-design/quanlythuchi",
+              "luklak-platform/endpoint/webhook"
+            ]
+          },
+          {
+            "group": "Sử dụng làm việc",
             "pages": [
               "function-design/functiondesign-en",
               "function-design/functiondesign-vn",
