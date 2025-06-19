@@ -44,15 +44,6 @@
             "pages": [
               "luklak-platform/quickstart"
             ]
-          },
-          {
-            "group": "Thiết kế chức năng"
-          },
-          {
-            "group": "Sử dụng làm việc",
-            "pages": [
-              "luklak-platform/endpoint/webhook"
-            ]
           }
         ]
       },
