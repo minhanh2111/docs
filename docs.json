@@ -20,7 +20,15 @@
             "group": "Tổng quan",
             "pages": [
               "getting-started/index",
-              "getting-started/taikhoan-dangki"
+              "getting-started/taikhoan-dangki",
+              {
+					"group": "Quick Start",
+					"icon": "code",
+					"pages": [
+						"navigation",
+						"code"
+					]
+				}
             ]
           },
           {
