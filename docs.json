@@ -9,10 +9,10 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-       "versions": [
+    "languages": [
       {
-        "version": "🇻🇳|Tiếng Việt",
-         "tabs": [
+        "language": "en",
+        "tabs": [
       {
         "tab": "Bắt đầu",
         "groups": [
@@ -140,15 +140,15 @@
     ]
       },
       {
-        "version": "🇺🇸|English",
-         "tabs": [
+        "language": "es",
+        "tabs": [
       {
-        "tab": "Getting Started",
+        "tab": "Bắt đầu",
         "groups": [
           {
             "group": "Get Started",
             "pages": [
-              "EN/getting-started/gettingstarteden",
+              "getting-started/index",
               "development"
             ]
           },
@@ -166,7 +166,7 @@
         ]
       },
       {
-        "tab": "LUKLAK platform",
+        "tab": "Platform",
         "groups": [
           {
             "group": "Kiến trúc hệ thống",
@@ -187,7 +187,7 @@
         ]
       },
       {
-        "tab": "Build",
+        "tab": "Thiết kế hệ thống",
         "groups": [
           {
             "group": "API Documentation",
@@ -207,7 +207,7 @@
         ]
       },
       {
-        "tab": "Use",
+        "tab": "Sử dụng làm việc",
         "groups": [
           {
             "group": "API Documentation",
@@ -247,7 +247,7 @@
         ]
       },
       {
-        "tab": "Academy",
+        "tab": "Khóa học",
         "groups": [
           {
             "group": "Tự động hóa",
