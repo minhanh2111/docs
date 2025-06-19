@@ -19,7 +19,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "01-getting-started/index",
+              "getting-started/index",
               "development"
             ]
           },
