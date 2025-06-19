@@ -65,13 +65,13 @@
           {
             "group": "Thiết kế chức năng",
             "pages": [
-              "function-design/functiondesign-vn",
-              "function-design/quanlythuchi"
+              "function-design/functiondesign-vn"
             ]
           },
           {
-            "group": "Endpoint Examples",
+            "group": "Chức năng mẫu",
             "pages": [
+              "function-design/quanlythuchi",
               "api-reference/endpoint/get",
               "api-reference/endpoint/create",
               "api-reference/endpoint/delete",
