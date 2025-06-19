@@ -42,34 +42,26 @@
           {
             "group": "Kiến trúc hệ thống",
             "pages": [
-              "luklak-platform/quickstart",
-              "function-design/functiondesign"
+              "luklak-platform/quickstart"
             ]
           },
           {
             "group": "Toàn cục & các miếng lego",
             "pages": [
-              "function-design/functiondesign-en",
               "function-design/functiondesign-vn",
-              "function-design/quanlythuchi",
-              "luklak-platform/endpoint/webhook"
+              "function-design/quanlythuchi"
             ]
           },
           {
             "group": "Thiết kế chức năng",
             "pages": [
-              "function-design/functiondesign-en",
               "function-design/functiondesign-vn",
-              "function-design/quanlythuchi",
-              "luklak-platform/endpoint/webhook"
+              "function-design/quanlythuchi"
             ]
           },
           {
             "group": "Sử dụng làm việc",
             "pages": [
-              "function-design/functiondesign-en",
-              "function-design/functiondesign-vn",
-              "function-design/quanlythuchi",
               "luklak-platform/endpoint/webhook"
             ]
           }
