@@ -143,7 +143,7 @@
         "version": "English",
          "tabs": [
       {
-        "tab": "Bắt đầu tiếng Anh",
+        "tab": "Getting Started",
         "groups": [
           {
             "group": "Get Started",
@@ -187,7 +187,7 @@
         ]
       },
       {
-        "tab": "Thiết kế hệ thống",
+        "tab": "Design your BizOps",
         "groups": [
           {
             "group": "API Documentation",
@@ -207,7 +207,7 @@
         ]
       },
       {
-        "tab": "Sử dụng làm việc",
+        "tab": "Put it in use",
         "groups": [
           {
             "group": "API Documentation",
@@ -247,7 +247,7 @@
         ]
       },
       {
-        "tab": "Khóa học",
+        "tab": "Academy",
         "groups": [
           {
             "group": "Tự động hóa",
