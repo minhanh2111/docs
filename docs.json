@@ -19,7 +19,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "vi/01-getting-started/gioi-thieu",
+              "01-getting-started/index",
               "development"
             ]
           },
