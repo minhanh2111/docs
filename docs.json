@@ -9,10 +9,7 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "languages": [
-      {
-        "language": "en",
-        "tabs": [
+     "tabs": [
       {
         "tab": "Bắt đầu",
         "groups": [
@@ -136,8 +133,6 @@
             ]
           }
         ]
-      }
-    ]
       }
     ]
 },
