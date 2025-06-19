@@ -23,7 +23,7 @@
               "getting-started/taikhoan-dangki",
               {
 					"group": "Quick Start",
-					"icon": "code",
+					"icon": "play",
 					"pages": [
 						"navigation",
 						"code"
