@@ -187,7 +187,7 @@
         ]
       },
       {
-        "tab": "Design your BizOps",
+        "tab": "Build",
         "groups": [
           {
             "group": "API Documentation",
@@ -207,7 +207,7 @@
         ]
       },
       {
-        "tab": "Put it in use",
+        "tab": "Use",
         "groups": [
           {
             "group": "API Documentation",
