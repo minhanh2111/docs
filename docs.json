@@ -46,17 +46,9 @@
             ]
           },
           {
-            "group": "Toàn cục & các miếng lego",
-            "pages": [
-              "function-design/functiondesign-vn",
-              "function-design/quanlythuchi"
-            ]
-          },
-          {
             "group": "Thiết kế chức năng",
             "pages": [
-              "function-design/functiondesign-vn",
-              "function-design/quanlythuchi"
+              "function-design/functiondesign-vn"
             ]
           },
           {
@@ -71,9 +63,10 @@
         "tab": "Thiết kế",
         "groups": [
           {
-            "group": "API Documentation",
+            "group": "Thiết kế chức năng",
             "pages": [
-              "api-reference/introduction"
+              "function-design/functiondesign-vn",
+              "function-design/quanlythuchi"
             ]
           },
           {
