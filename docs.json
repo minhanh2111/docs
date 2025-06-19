@@ -58,7 +58,7 @@
         ]
       },
       {
-        "tab": "Thiết kế hệ thống",
+        "tab": "Thiết kế",
         "groups": [
           {
             "group": "API Documentation",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "tab": "Sử dụng làm việc",
+        "tab": "Sử dụng",
         "groups": [
           {
             "group": "API Documentation",
