@@ -9,7 +9,10 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-     "tabs": [
+     "versions": [
+      {
+        "version": "🇻🇳 |Tiếng Việt",
+         "tabs": [
       {
         "tab": "Bắt đầu",
         "groups": [
@@ -133,6 +136,137 @@
             ]
           }
         ]
+      }
+    ]
+      },
+      {
+        "version": "🇺🇸 |English",
+         "tabs": [
+      {
+        "tab": "Getting Started",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "getting-started/index",
+              "development"
+            ]
+          },
+          {
+            "group": "Essentials",
+            "pages": [
+              "function-design/crm",
+              "essentials/code",
+              "essentials/images",
+              "essentials/settings",
+              "essentials/navigation",
+              "essentials/reusable-snippets"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Platform",
+        "groups": [
+          {
+            "group": "Kiến trúc hệ thống",
+            "pages": [
+              "luklak-platform/quickstart",
+              "function-design/functiondesign"
+            ]
+          },
+          {
+            "group": "Build",
+            "pages": [
+              "function-design/functiondesign-en",
+              "function-design/functiondesign-vn",
+              "function-design/quanlythuchi",
+              "luklak-platform/endpoint/webhook"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Build",
+        "groups": [
+          {
+            "group": "API Documentation",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Endpoint Examples",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Use",
+        "groups": [
+          {
+            "group": "API Documentation",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Endpoint Examples",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Templates",
+        "groups": [
+          {
+            "group": "API Documentation",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Endpoint Examples",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Academy",
+        "groups": [
+          {
+            "group": "Tự động hóa",
+            "pages": [
+              "courses/khoa-hoc"
+            ]
+          },
+          {
+            "group": "Endpoint Examples",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      }
+    ]
       }
     ]
 },
