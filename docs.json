@@ -69,7 +69,7 @@
             "group": "Chức năng mẫu",
             "pages": [
               "function-design/quanlythuchi",
-              "api-reference/endpoint/get",
+              "function-design/crmbygemini",
               "api-reference/endpoint/create",
               "api-reference/endpoint/delete",
               "api-reference/endpoint/webhook"
