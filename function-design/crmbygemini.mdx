@@ -52,36 +52,177 @@ title: "CRM by gemini"
 - **Mô tả nghiệp vụ**: Đại diện cho một thương vụ bán hàng cụ thể với một khách hàng, có giá trị và ngày dự kiến kết thúc. Đây là đối tượng trung tâm của quy trình sales.
 - **Ví dụ**: Cơ hội cung cấp 100 license phần mềm cho Công ty ABC; Cơ hội triển khai hệ thống ERP cho Tập đoàn XYZ.
 
-**Luồng tiến trình**
+<Accordion title="New Accordion" icon="sparkles">
+  ### 🏛️ LƯỢC ĐỒ CẤU TRÚC DỮ LIỆU (Theo Loại trường Luklak - Có dấu)
 
-<Frame caption="Luồng tiến trình của Khách hàng">
-  ```mermaid
-  graph TD
-      A[MỚI] --> B(TIẾP CẬN);
-      B --> C{ĐÁNH GIÁ};
-      C -- Đủ tiêu chuẩn --> D[PHÂN TÍCH NHU CẦU];
-      C -- Không đủ tiêu chuẩn --> H[THUA - HỦY];
-      D --> E[BÁO GIÁ];
-      E --> F[ĐÀM PHÁN];
-      F --> G[THẮNG];
-      F --> H;
-      E --> H;
-      D --> H;
-  ```
-</Frame>
+  ---
+
+  **`1. Công ty`**
+
+  - `id` (PK)
+  - `Tên công ty` (Dòng chữ - _Bắt buộc_)
+  - `Mã số thuế` (Dòng chữ - _Duy nhất_)
+  - `Website` (Dòng chữ)
+  - `Địa chỉ` (Đoạn văn bản)
+  - `Ngành nghề` (Dòng chữ)
+  - `Quy mô` (Dòng chữ)
+  - `Loại hình` (Sổ xuống chọn một: 'Tiềm năng', 'Khách hàng', 'Ngừng hợp tác')
+  - `Người phụ trách` (Người đơn - _`Tham chiếu Người dùng`_)
+
+  ---
+
+  **`2. Người liên hệ`**
+
+  - `id` (PK)
+  - `Họ và tên` (Dòng chữ - _Bắt buộc_)
+  - `Chức danh` (Dòng chữ)
+  - `Email` (Email đơn - _Duy nhất_)
+  - `Số điện thoại` (Số điện thoại)
+  - `Công ty` (Đầu việc đơn - _`Tham chiếu Công ty (Cha), Bắt buộc`_)
+  - `Ghi chú` (Đoạn văn bản)
+  - `Trạng thái liên hệ` (Sổ xuống chọn một: 'Mới', 'Đang liên hệ', 'Ngừng liên hệ')
+
+  ---
+
+  **`3. Cơ hội`**
+
+  - `id` (PK)
+  - `Tên cơ hội` (Dòng chữ - _Bắt buộc_)
+  - `Mô tả` (Đoạn văn bản)
+  - `Công ty` (Đầu việc đơn - _`Tham chiếu Công ty, Bắt buộc`_)
+  - `Người liên hệ chính` (Đầu việc đơn - _`Tham chiếu Người liên hệ`_)
+  - `Giá trị dự kiến` (Số thập phân)
+  - `Tỷ lệ thành công` (Số nguyên - _Đơn vị %_)
+  - `Doanh thu dự kiến` (Công thức)
+  - `Nguồn cơ hội` (Dòng chữ)
+  - `Mức độ ưu tiên` (Sổ xuống chọn một: 'Cao', 'Trung bình', 'Thấp')
+  - `Nhân viên phụ trách` (Người đơn - _`Tham chiếu Người dùng`_)
+  - `Ngày dự kiến đóng` (Ngày)
+  - `Ngày đóng thực tế` (Ngày)
+  - `Lý do thua/hủy` (Đoạn văn bản)
+  - `Đối thủ cạnh tranh` (Dòng chữ)
+  - `Ngày liên hệ đầu tiên` (Ngày)
+  - `Ngân sách dự kiến` (Số thập phân)
+  - `Trạng thái cơ hội` (Sổ xuống chọn một: 'Mới', 'Tiếp cận', 'Đánh giá', 'Phân tích nhu cầu', 'Báo giá', 'Đàm phán', 'Thắng', 'Thua - Hủy')
+    - **Bảng dữ liệu liên quan:** `Danh sách sản phẩm` (Chi tiết bên dưới)
+
+  ---
+
+  **``3.1. Danh sách sản phẩm của Cơ hội (trong Cơ hội)``**
+  _`Cấu trúc các cột trong Bảng dữ liệu Danh sách sản phẩm`_
+
+  - `Sản phẩm/Dịch vụ` (Đầu việc đơn - _`Tham chiếu Sản phẩm/Dịch vụ`_)
+  - `Số lượng` (Số nguyên - _Bắt buộc_)
+  - `Giảm giá (%)` (Số thập phân - _Đơn vị %_)
+  - `Đơn giá tại thời điểm thêm` (Số thập phân - _`Tự động lấy từ Sản phẩm/Dịch vụ`_)
+  - `Thành tiền` (Công thức)
+
+  ---
+
+  **`4. Báo giá`**
+
+  - `id` (PK)
+  - `Cơ hội` (Đầu việc đơn - _`Tham chiếu Cơ hội (Cha), Bắt buộc`_)
+  - `Mã báo giá` (Dòng chữ - _Duy nhất, Bắt buộc_)
+  - `Ngày báo giá` (Ngày - _Bắt buộc_)
+  - `Ngày hết hạn` (Ngày)
+  - `Điều khoản thanh toán` (Đoạn văn bản)
+  - `Trạng thái báo giá` (Sổ xuống chọn một: 'Dự thảo', 'Chờ duyệt', 'Đã gửi', 'Khách hàng chấp nhận', 'Khách hàng từ chối')
+  - `Người tạo` (Người đơn - _`Tham chiếu Người dùng`_)
+    - **Bảng dữ liệu liên quan:** `Chi tiết sản phẩm báo giá` (Chi tiết bên dưới)
+
+  ---
+
+  **``4.1. Chi tiết sản phẩm của Báo giá (trong Báo giá)``**
+  _`Cấu trúc các cột trong Bảng dữ liệu Chi tiết sản phẩm báo giá`_
+
+  - `Sản phẩm/Dịch vụ` (Đầu việc đơn - _`Tham chiếu Sản phẩm/Dịch vụ`_)
+  - `Số lượng` (Số nguyên - _Bắt buộc_)
+  - `Đơn giá` (Số thập phân - _Bắt buộc_)
+  - `Thành tiền` (Công thức - _Bắt buộc_)
+  - `Đơn vị tính` (Dòng chữ - _`Tự động lấy từ Sản phẩm/Dịch vụ`_)
+
+  ---
+
+  **`5. Hợp đồng`**
+
+  - `id` (PK)
+  - `Cơ hội` (Đầu việc đơn - _`Tham chiếu Cơ hội (Cha), Bắt buộc, Duy nhất`_)
+  - `Số hợp đồng` (Dòng chữ - _Duy nhất, Bắt buộc_)
+  - `Tên hợp đồng` (Dòng chữ)
+  - `Ngày ký` (Ngày)
+  - `Ngày hiệu lực` (Ngày)
+  - `Ngày kết thúc` (Ngày)
+  - `Giá trị hợp đồng` (Số thập phân)
+  - `Trạng thái thanh toán` (Dòng chữ)
+  - `File đính kèm` (Tệp đính kèm)
+  - `Trạng thái hợp đồng` (Sổ xuống chọn một: 'Dự thảo', 'Chờ ký', 'Đã ký', 'Đang thực hiện', 'Hoàn thành', 'Thanh lý')
+  - `Người tạo` (Người đơn - _`Tham chiếu Người dùng`_)
+
+  ---
+
+  **`6. Hoạt động`**
+
+  - `id` (PK)
+  - `Tiêu đề` (Dòng chữ - _Bắt buộc_)
+  - `Loại hoạt động` (Sổ xuống chọn một: 'Email', 'Gọi điện', 'Họp', 'Tác vụ khác' - _Bắt buộc_)
+  - `Thời gian bắt đầu` (Ngày giờ)
+  - `Thời gian kết thúc` (Ngày giờ)
+  - `Mô tả kết quả` (Đoạn văn bản)
+  - `Người thực hiện` (Người đơn - _`Tham chiếu Người dùng`_)
+  - `Trạng thái hoạt động` (Sổ xuống chọn một: 'Sắp diễn ra', 'Đã hoàn thành', 'Đã hủy')
+  - `Liên kết Cơ hội` (Đầu việc đơn - _`Tham chiếu Cơ hội`_)
+  - `Liên kết Công ty` (Đầu việc đơn - _`Tham chiếu Công ty`_)
+  - `Liên kết Người liên hệ` (Đầu việc đơn - _`Tham chiếu Người liên hệ`_)
+
+  ---
+
+  **`7. Sản phẩm/Dịch vụ`**
+
+  - `id` (PK)
+  - `Tên sản phẩm` (Dòng chữ - _Bắt buộc_)
+  - `Mã sản phẩm` (Dòng chữ - _Duy nhất_)
+  - `Đơn vị tính` (Dòng chữ)
+  - `Đơn giá` (Số thập phân - _Bắt buộc_)
+  - `Mô tả` (Đoạn văn bản)
+  - `Trạng thái kinh doanh` (Sổ xuống chọn một: 'Đang kinh doanh', 'Ngừng kinh doanh')
+</Accordion>
+
+**Luồng tiến trình**
 
 **Bảng chi tiết các Trạng thái**
 
-| Trạng thái                 | Nghiệp vụ                                                                     | Cài đặt nâng cao                                                                                                                     |
-| :------------------------- | :---------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
-| **`1. MỚI`**               | Cơ hội vừa được tạo, chờ nhân viên kinh doanh (NVKD) tiếp nhận.               | **Phân quyền**: Chỉ NVKD được chuyển sang trạng thái tiếp theo.                                                                      |
-| **`2. TIẾP CẬN`**          | NVKD đã liên hệ lần đầu với khách hàng.                                       | **Điều kiện dữ liệu**: Yêu cầu cập nhật trường `Ngày liên hệ đầu tiên`.                                                              |
-| **`3. ĐÁNH GIÁ`**          | NVKD đánh giá tiềm năng của cơ hội (dựa trên ngân sách, nhu cầu, thẩm quyền). | **Màn hình nhập liệu**: Hiện các trường `Ngân sách dự kiến`, `Mức độ ưu tiên`.                                                       |
-| **`4. PHÂN TÍCH NHU CẦU`** | NVKD làm việc sâu với khách hàng để hiểu rõ nhu cầu.                          | **Điều kiện dữ liệu**: Yêu cầu tạo ít nhất 1 `Hoạt động` loại `Cuộc họp`.                                                            |
-| **`5. BÁO GIÁ`**           | NVKD đã gửi báo giá cho khách hàng.                                           | **Tự động hoá**: Tạo 1 `Việc con` loại `Báo giá` với trạng thái `Đã gửi`.                                                            |
-| **`6. ĐÀM PHÁN`**          | Hai bên đang thương lượng về các điều khoản trong báo giá/hợp đồng.           | **Phân quyền**: Trưởng phòng Kinh doanh (TPKD) có thể tham gia và nhận thông báo.                                                    |
-| **`7. THẮNG`**             | Khách hàng đã đồng ý. Cơ hội thành công.                                      | **Tự động hoá**: 1. Tự động tạo `Việc con` loại `Hợp đồng`. 2. Cập nhật trường `Loại hình` ở `Công ty` liên quan thành `Khách hàng`. |
-| **`8. THUA - HỦY`**        | Khách hàng từ chối hoặc cơ hội không khả thi.                                 | **Màn hình nhập liệu**: Yêu cầu bắt buộc nhập `Lý do thua/hủy`.                                                                      |
+<Tabs>
+  <Tab title="Workflow">
+    <Frame caption="Luồng tiến trình của Khách hàng">
+      ```mermaid
+      graph TD
+          A[MỚI] --> B(TIẾP CẬN);
+          B --> C{ĐÁNH GIÁ};
+          C -- Đủ tiêu chuẩn --> D[PHÂN TÍCH NHU CẦU];
+          C -- Không đủ tiêu chuẩn --> H[THUA - HỦY];
+          D --> E[BÁO GIÁ];
+          E --> F[ĐÀM PHÁN];
+          F --> G[THẮNG];
+          F --> H;
+          E --> H;
+          D --> H;
+      ```
+    </Frame>
+  </Tab>
+  <Tab title="Status, Transition & Advanced Settings">
+    | Trạng thái                 | Nghiệp vụ                                                                     | Cài đặt nâng cao                                                                                                                     |
+    | :------------------------- | :---------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------- |
+    | **`1. MỚI`**               | Cơ hội vừa được tạo, chờ nhân viên kinh doanh (NVKD) tiếp nhận.               | **Phân quyền**: Chỉ NVKD được chuyển sang trạng thái tiếp theo.                                                                      |
+    | **`2. TIẾP CẬN`**          | NVKD đã liên hệ lần đầu với khách hàng.                                       | **Điều kiện dữ liệu**: Yêu cầu cập nhật trường `Ngày liên hệ đầu tiên`.                                                              |
+    | **`3. ĐÁNH GIÁ`**          | NVKD đánh giá tiềm năng của cơ hội (dựa trên ngân sách, nhu cầu, thẩm quyền). | **Màn hình nhập liệu**: Hiện các trường `Ngân sách dự kiến`, `Mức độ ưu tiên`.                                                       |
+    | **`4. PHÂN TÍCH NHU CẦU`** | NVKD làm việc sâu với khách hàng để hiểu rõ nhu cầu.                          | **Điều kiện dữ liệu**: Yêu cầu tạo ít nhất 1 `Hoạt động` loại `Cuộc họp`.                                                            |
+    | **`5. BÁO GIÁ`**           | NVKD đã gửi báo giá cho khách hàng.                                           | **Tự động hoá**: Tạo 1 `Việc con` loại `Báo giá` với trạng thái `Đã gửi`.                                                            |
+    | **`6. ĐÀM PHÁN`**          | Hai bên đang thương lượng về các điều khoản trong báo giá/hợp đồng.           | **Phân quyền**: Trưởng phòng Kinh doanh (TPKD) có thể tham gia và nhận thông báo.                                                    |
+    | **`7. THẮNG`**             | Khách hàng đã đồng ý. Cơ hội thành công.                                      | **Tự động hoá**: 1. Tự động tạo `Việc con` loại `Hợp đồng`. 2. Cập nhật trường `Loại hình` ở `Công ty` liên quan thành `Khách hàng`. |
+    | **`8. THUA - HỦY`**        | Khách hàng từ chối hoặc cơ hội không khả thi.                                 | **Màn hình nhập liệu**: Yêu cầu bắt buộc nhập `Lý do thua/hủy`.                                                                      |
+  </Tab>
+</Tabs>
 
 **Màn hình trường dữ liệu**
 
