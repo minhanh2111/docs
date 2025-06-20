@@ -4,6 +4,7 @@ title: "CRM by gemini"
 
 ### 🚀 TỔNG QUAN
 
+
 **Mục đích:** Quản lý toàn bộ quy trình bán hàng B2B, từ việc theo dõi các `Công ty`, `Người liên hệ`, quản lý các `Cơ hội kinh doanh`, cho đến việc tạo `Báo giá` và `Hợp đồng`.
 
 **Logic nghiệp vụ:** Hệ thống xoay quanh các đối tượng chính: `Công ty` và `Cơ hội`. Một `Công ty` có thể có nhiều `Người liên hệ` và nhiều `Cơ hội`. Mỗi `Cơ hội` sẽ trải qua một quy trình bán hàng chuẩn hoá. Khi một `Cơ hội` thành công, một `Hợp đồng` sẽ được tạo ra. Các `Hoạt động` (cuộc gọi, email, cuộc họp) được ghi nhận và liên kết với các đối tượng trên để có cái nhìn 360 độ.
@@ -108,7 +109,7 @@ title: "CRM by gemini"
 
   ---
 
-  **``3.1. Danh sách sản phẩm của Cơ hội (trong Cơ hội)``**
+  **`3.1. Danh sách sản phẩm của Cơ hội (trong Cơ hội)`**
   _`Cấu trúc các cột trong Bảng dữ liệu Danh sách sản phẩm`_
 
   - `Sản phẩm/Dịch vụ` (Đầu việc đơn - _`Tham chiếu Sản phẩm/Dịch vụ`_)
@@ -133,7 +134,7 @@ title: "CRM by gemini"
 
   ---
 
-  **``4.1. Chi tiết sản phẩm của Báo giá (trong Báo giá)``**
+  **`4.1. Chi tiết sản phẩm của Báo giá (trong Báo giá)`**
   _`Cấu trúc các cột trong Bảng dữ liệu Chi tiết sản phẩm báo giá`_
 
   - `Sản phẩm/Dịch vụ` (Đầu việc đơn - _`Tham chiếu Sản phẩm/Dịch vụ`_)
@@ -386,17 +387,4 @@ title: "CRM by gemini"
 | Giao diện làm việc             | 3        | 0,4     | 1,2       |
 | Bộ lọc                         | 3        | 0,35    | 1,05      |
 | Khối trình bày trong dashboard | 3        | 0,5     | 1,5       |
-| **TỔNG CỘNG**                  |          |         | **19,27** |
-
----
-
-### 🤔 GỢI Ý THẢO LUẬN TIẾP
-
-Bản thiết kế này đã bao phủ các nghiệp vụ cốt lõi của CRM B2B. Để hoàn thiện hơn nữa, chúng ta có thể thảo luận thêm:
-
-1. **Quản lý Khách hàng tiềm năng (Lead Management):** Chúng ta có muốn thêm một Loại việc `Lead` riêng biệt để quản lý các đầu mối thô trước khi chuyển đổi thành `Công ty`, `Liên hệ` và `Cơ hội` không? Quy trình này gọi là "Lead Conversion".
-2. **Tích hợp Email:** Bạn có muốn hệ thống tự động ghi nhận email gửi đi/đến từ khách hàng vào mục `Hoạt động` của `Người liên hệ` tương ứng không?
-3. **Phân quyền theo địa lý/sản phẩm:** Nếu đội ngũ kinh doanh được chia theo khu vực hoặc dòng sản phẩm, chúng ta có cần thêm logic phân quyền phức tạp hơn không?
-4. **Dữ liệu ban đầu:** Chúng ta sẽ nhập dữ liệu khách hàng hiện có vào hệ thống như thế nào? Cần thiết kế tính năng import từ file Excel không?
-
-Vui lòng chọn số thứ tự để chúng ta đi sâu vào thảo luận nhé.
+| **TỔNG CỘNG**                  |          |         | **19,2**  |
