@@ -2,7 +2,7 @@
 title: "🚀 CRM by gemini"
 ---
 
-### 🚀 TỔNG QUAN
+## 🚀 TỔNG QUAN
 
 <Frame caption="Tổng quan luồng BPMN">
   <iframe src="https://modeler.camunda.io/embed/da88712d-4ad4-46ce-af8c-d0d9a2267079" width="700" height="500" allowfullscreen="true" />
@@ -45,11 +45,11 @@ title: "🚀 CRM by gemini"
 
 ---
 
-### 🧩 LOẠI VIỆC & NGHIỆP VỤ
+## 🧩 LOẠI VIỆC & NGHIỆP VỤ
 
 #### Danh sách loại việc
 
-##### **`1. Cơ hội (Deal/Opportunity)`** - _Loại việc Tiêu chuẩn_
+### **`1. Cơ hội (Deal/Opportunity)`** - _Loại việc Tiêu chuẩn_
 
 **Mô tả nghiệp vụ**
 
@@ -241,7 +241,7 @@ title: "🚀 CRM by gemini"
 
 ---
 
-##### **`2. Công ty (Account)`** - _Loại việc Tiêu chuẩn_
+### **`2. Công ty (Account)`** - _Loại việc Tiêu chuẩn_
 
 - **Mô tả nghiệp vụ**: Lưu trữ thông tin về một tổ chức là khách hàng hoặc khách hàng tiềm năng.
 - **Luồng tiến trình**: Đơn giản: `TIỀM NĂNG` → `KHÁCH HÀNG` → `NGỪNG HỢP TÁC`
@@ -249,7 +249,7 @@ title: "🚀 CRM by gemini"
 
 ---
 
-##### **`3. Người liên hệ (Contact)`** - _`Loại việc con của Công ty`_
+### **`3. Người liên hệ (Contact)`** - _`Loại việc con của Công ty`_
 
 - **Mô tả nghiệp vụ**: Lưu trữ thông tin về một cá nhân làm việc tại một Công ty.
 - **Luồng tiến trình**: `MỚI` → `ĐANG LIÊN HỆ` → `NGỪNG LIÊN HỆ`
@@ -257,7 +257,7 @@ title: "🚀 CRM by gemini"
 
 ---
 
-##### **`4. Báo giá (Quote)`** - _`Loại việc con của Cơ hội`_
+### **`4. Báo giá (Quote)`** - _`Loại việc con của Cơ hội`_
 
 - **Mô tả nghiệp vụ**: Một tài liệu báo giá chính thức gửi cho khách hàng, bao gồm các sản phẩm, dịch vụ, số lượng, đơn giá và thành tiền.
 - **Luồng tiến trình**: `DỰ THẢO` → `CHỜ DUYỆT` → `ĐÃ GỬI` → `KHÁCH HÀNG CHẤP NHẬN` → `KHÁCH HÀNG TỪ CHỐI`
@@ -265,7 +265,7 @@ title: "🚀 CRM by gemini"
 
 ---
 
-##### **`5. Hợp đồng (Contract)`** - _`Loại việc con của Cơ hội`_
+### **`5. Hợp đồng (Contract)`** - _`Loại việc con của Cơ hội`_
 
 - **Mô tả nghiệp vụ**: Tài liệu pháp lý ghi nhận thỏa thuận giữa hai bên sau khi cơ hội thắng.
 - **Luồng tiến trình**: `DỰ THẢO` → `CHỜ KÝ` → `ĐÃ KÝ` → `ĐANG THỰC HIỆN` → `HOÀN THÀNH` → `THANH LÝ`
@@ -273,7 +273,7 @@ title: "🚀 CRM by gemini"
 
 ---
 
-##### **`6. Hoạt động (Activity)`** - _Loại việc Tiêu chuẩn_
+### **`6. Hoạt động (Activity)`** - _Loại việc Tiêu chuẩn_
 
 - **Mô tả nghiệp vụ**: Ghi nhận một tương tác cụ thể với khách hàng.
 - **Luồng tiến trình**: `SẮP DIỄN RA` → `ĐÃ HOÀN THÀNH` → `ĐÃ HỦY`
@@ -281,7 +281,7 @@ title: "🚀 CRM by gemini"
 
 ---
 
-##### **`7. Sản phẩm/Dịch vụ`** - _Loại việc Tiêu chuẩn_
+### **`7. Sản phẩm/Dịch vụ`** - _Loại việc Tiêu chuẩn_
 
 - **Mô tả nghiệp vụ**: Danh mục sản phẩm/dịch vụ của công ty để dùng trong Báo giá.
 - **Luồng tiến trình**: `ĐANG KINH DOANH` → `NGỪNG KINH DOANH`
@@ -289,9 +289,9 @@ title: "🚀 CRM by gemini"
 
 ---
 
-### Mối quan hệ giữa các Loại việc
+## Mối quan hệ giữa các Loại việc
 
-**Loại việc Cha - con**
+### **Loại việc Cha - con**
 
 | Quan hệ Cha - Con           | Mô tả                                          |
 | :-------------------------- | :--------------------------------------------- |
@@ -299,20 +299,20 @@ title: "🚀 CRM by gemini"
 | `Cơ hội` - `Báo giá`        | Một cơ hội có thể có nhiều phiên bản báo giá.  |
 | `Cơ hội` - `Hợp đồng`       | Một cơ hội thắng sẽ có một hợp đồng tương ứng. |
 
-**Kết nối Loại việc**
+### **Kết nối Loại việc**
 
 | Loại Kết nối                                         | Mô tả                                                                           |
 | :--------------------------------------------------- | :------------------------------------------------------------------------------ |
 | `Hoạt động` - (`Cơ hội`, `Công ty`, `Người liên hệ`) | Một hoạt động có thể liên quan đến nhiều đối tượng để cung cấp cái nhìn 360 độ. |
 
-**Trường chọn Đầu việc**
+### **Trường chọn Đầu việc**
 
 | Trường                              | Tham chiếu                 | Mô tả                                |
 | :---------------------------------- | :------------------------- | :----------------------------------- |
 | 1. `Cơ hội` / `Công ty`             | Loại việc: `Công ty`       | Chọn công ty mà cơ hội này thuộc về. |
 | 2. `Cơ hội` / `Người liên hệ chính` | Loại việc: `Người liên hệ` | Chọn người liên hệ chính cho cơ hội. |
 
-**Trường bảng dữ liệu**
+### **Trường bảng dữ liệu**
 
 | Trường Bảng dữ liệu             | Tham chiếu                                                                                                                          | Cột thủ công                              |
 | :------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------- |
@@ -321,7 +321,7 @@ title: "🚀 CRM by gemini"
 
 ---
 
-### 🎭 VAI TRÒ
+## 🎭 VAI TRÒ
 
 | Vai trò                        | Mô tả                                              | Phân quyền & Thông báo                                                                                                                                   |
 | :----------------------------- | :------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -331,9 +331,9 @@ title: "🚀 CRM by gemini"
 
 ---
 
-### 🤖 TỰ ĐỘNG HOÁ
+## 🤖 TỰ ĐỘNG HOÁ
 
-**Bảng Quy tắc tự động trên tiến trình**
+### **Bảng Quy tắc tự động trên tiến trình**
 
 | Loại việc & Trạng thái  | Hành động tự động                                                                                                                                       |
 | :---------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -341,7 +341,7 @@ title: "🚀 CRM by gemini"
 | 2. `Cơ hội` / `BÁO GIÁ` | - Tạo mới Đầu việc loại `Báo giá` với trạng thái `Dự thảo`.                                                                                             |
 | 3. `Hợp đồng` / `ĐÃ KÝ` | - Gửi chat tới nhóm Kế toán thông báo về hợp đồng mới.                                                                                                  |
 
-**Bảng Quy tắc chạy ngầm**
+### **Bảng Quy tắc chạy ngầm**
 
 | Tên quy tắc                  | Cách kích hoạt             | Hành động tự động                                                                                                           |
 | :--------------------------- | :------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
@@ -350,9 +350,9 @@ title: "🚀 CRM by gemini"
 
 ---
 
-### 📊 GIAO DIỆN LÀM VIỆC, BỘ LỌC, BÁO CÁO
+## 📊 GIAO DIỆN LÀM VIỆC, BỘ LỌC, BÁO CÁO
 
-#### Giao diện
+### Giao diện
 
 | Giao diện                    | Mô tả                                                                        | Nguồn dữ liệu          |
 | :--------------------------- | :--------------------------------------------------------------------------- | :--------------------- |
@@ -360,7 +360,7 @@ title: "🚀 CRM by gemini"
 | 2. Lịch hoạt động [Calendar] | Xem các `Hoạt động` (họp, gọi điện) theo lịch.                               | Loại việc: `Hoạt động` |
 | 3. Danh sách Công ty [List]  | Danh sách tất cả công ty, có thể tìm kiếm và lọc nhanh.                      | Loại việc: `Công ty`   |
 
-#### Bộ lọc
+### Bộ lọc
 
 | Bộ lọc                        | Tiêu chí lọc                                                                            | Thông báo                           |
 | :---------------------------- | :-------------------------------------------------------------------------------------- | :---------------------------------- |
@@ -368,7 +368,7 @@ title: "🚀 CRM by gemini"
 | 2. Cơ hội sắp đóng            | `Cơ hội` có (Ngày dự kiến đóng trong 30 ngày tới) VÀ (Trạng thái \!= `Thắng`, `Thua`)   | Hàng tuần, gửi cho TPKD             |
 | 3. Khách hàng không tương tác | `Công ty` có (Loại hình = `Khách hàng`) VÀ (Không có `Hoạt động` nào trong 60 ngày qua) | Hàng tháng, gửi cho người phụ trách |
 
-#### Báo cáo
+### Báo cáo
 
 | Khối trình bày                      | Dữ liệu                                                                                     | Mô tả                                                                    |
 | :---------------------------------- | :------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------- |
