@@ -18,31 +18,31 @@ graph TD
 
 <Frame>
 ```mermaid
-  graph TD
-      A[Bắt đầu: Hiểu Vấn đề Kinh doanh & JTBD] --> B{Quy trình có RÕ RÀNG & PHỨC TẠP không?};
-      B -- Có --> C[Bắt đầu bằng việc VẼ BẢN ĐỒ QUY TRÌNH (Workflow-First Leaning)];
-      B -- Không/Chưa rõ --> D[Bắt đầu bằng việc XÁC ĐỊNH CÁC THỰC THỂ DỮ LIỆU CỐT LÕI (Object-First Leaning)];
-  
-      C --> E{Trong quy trình, có những THỰC THỂ DỮ LIỆU nào cần quản lý?};
-      E -- Có --> F[Định nghĩa các LOẠI VIỆC (Objects) và Trường Dữ liệu];
-      F --> G[Chi tiết hóa LUỒNG TIẾN TRÌNH cho từng Loại việc];
-  
-      D --> H{Các Thực thể này trải qua NHỮNG GIAI ĐOẠN nào?};
-      H -- Có --> G;
-      H -- Chưa rõ --> I[Tiếp tục phân tích quy trình liên quan đến các Thực thể này];
-      I --> G;
-  
-      G --> J{Đối tượng này có VÒNG ĐỜI & NHIỀU THUỘC TÍNH RIÊNG không?};
-      J -- Có --> K[Giữ/Tạo thành LOẠI VIỆC riêng];
-      J -- Không --> L[Xem xét GỘP vào Loại việc khác hoặc chỉ là TRƯỜNG DỮ LIỆU];
-  
-      K --> M{Quy trình này có GẮN LIỀN với sự thay đổi trạng thái của ĐỐI TƯỢNG này không?};
-      M -- Có --> N[Đây là LUỒNG TIẾN TRÌNH bên trong Loại việc];
-      M -- Không --> O[Xem xét tạo LOẠI VIỆC "QUY TRÌNH" riêng để quản lý nó];
-  
-      N --> P[Hoàn thiện: Tự động hóa, Phân quyền, Giao diện];
-      O --> P;
-      L --> P;
+graph TD
+    A[Bắt đầu: Hiểu Vấn đề KD & JTBD] --> B{Quy trình RÕ RÀNG & PHỨC TẠP?};
+    B -- Có --> C[Ưu tiên: VẼ QUY TRÌNH Trước];
+    B -- Không/Chưa rõ --> D[Ưu tiên: XÁC ĐỊNH ĐỐI TƯỢNG Trước];
+
+    C --> E{Quy trình cần quản lý THỰC THỂ DỮ LIỆU nào?};
+    E --> F[Định nghĩa LOẠI VIỆC (Objects) & Trường];
+    F --> G[Chi tiết hóa LUỒNG TIẾN TRÌNH cho Loại việc];
+
+    D --> H{Thực thể này có các GIAI ĐOẠN XỬ LÝ?};
+    H -- Có --> G;
+    H -- Chưa rõ --> I[Phân tích thêm quy trình liên quan];
+    I --> G;
+
+    G --> J{Đối tượng này có VÒNG ĐỜI & THUỘC TÍNH RIÊNG biệt không?};
+    J -- Có --> K[Giữ/Tạo LOẠI VIỆC riêng];
+    J -- Không --> L[Cân nhắc GỘP hoặc chỉ là TRƯỜNG];
+
+    K --> M{Quy trình gắn với TRẠNG THÁI của ĐỐI TƯỢNG này?};
+    M -- Có --> N[Đây là LUỒNG TIẾN TRÌNH của Loại việc];
+    M -- Không --> O[Cân nhắc LOẠI VIỆC 'QUY TRÌNH' riêng];
+
+    N --> P[Hoàn thiện: Tự động hóa, Phân quyền, UI];
+    O --> P;
+    L --> P;
 ```
 </Frame>
 
