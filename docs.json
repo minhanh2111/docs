@@ -251,7 +251,8 @@
           {
             "group": "Tự động hóa",
             "pages": [
-              "courses/khoa-hoc"
+              "courses/khoa-hoc",
+              "function-design/ngonngu"
             ]
           },
           {
