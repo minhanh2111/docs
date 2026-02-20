@@ -179,7 +179,8 @@
             "group": "Kiến trúc hệ thống",
             "pages": [
               "luklak-platform/quickstart",
-              "function-design/functiondesign"
+              "function-design/functiondesign",
+              "luklak-platform/kientruc"
             ]
           },
           {
